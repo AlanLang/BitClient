@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E732A35D2734C739008467FE /* AddTorrentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E732A35C2734C739008467FE /* AddTorrentView.swift */; };
+		E732A3622734C781008467FE /* AddTorrentNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E732A3612734C781008467FE /* AddTorrentNavigationBar.swift */; };
+		E732A36827350CD1008467FE /* ServiceNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E732A36727350CD1008467FE /* ServiceNavigationBar.swift */; };
+		E732A36D27351F9D008467FE /* AddTorrentLinkFormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E732A36C27351F9D008467FE /* AddTorrentLinkFormModel.swift */; };
+		E757B7A727326DB300A59E1C /* TorrentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E757B7A627326DB300A59E1C /* TorrentItem.swift */; };
+		E77493AA273A831B00EE6703 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77493A9273A831B00EE6703 /* AboutView.swift */; };
+		E77493AD273A925400EE6703 /* PreferenceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77493AC273A925400EE6703 /* PreferenceData.swift */; };
+		E7A10E1E2738D0BD000C89D8 /* ServiceOfflineTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A10E1D2738D0BD000C89D8 /* ServiceOfflineTipView.swift */; };
+		E7A10E212738D0F6000C89D8 /* ListEmptyTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A10E202738D0F6000C89D8 /* ListEmptyTipView.swift */; };
+		E7A34E332733BADC005F94E2 /* Maindata.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A34E322733BADC005F94E2 /* Maindata.swift */; };
+		E7BC55E2273266CD00AA2694 /* BitClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC55E1273266CD00AA2694 /* BitClientApp.swift */; };
+		E7BC55E6273266CE00AA2694 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7BC55E5273266CE00AA2694 /* Assets.xcassets */; };
+		E7BC55E9273266CE00AA2694 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7BC55E8273266CE00AA2694 /* Preview Assets.xcassets */; };
+		E7BC55F42732670500AA2694 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC55F32732670500AA2694 /* HomeView.swift */; };
+		E7BC55F82732672300AA2694 /* HomeNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC55F72732672300AA2694 /* HomeNavigationBar.swift */; };
+		E7D8E41127353F1B0077DD79 /* AboutNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D8E41027353F1B0077DD79 /* AboutNavigationBar.swift */; };
+		E7D8E41327357CED0077DD79 /* ServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D8E41227357CED0077DD79 /* ServiceView.swift */; };
+		E7D8E41E273603600077DD79 /* ServiceEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D8E41D273603600077DD79 /* ServiceEditView.swift */; };
+		E7D8E420273603760077DD79 /* ServiceEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D8E41F273603760077DD79 /* ServiceEditViewModel.swift */; };
+		E7D8E423273605E10077DD79 /* NoServiceTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D8E422273605E10077DD79 /* NoServiceTipView.swift */; };
+		E7D8E4262736BB1F0077DD79 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E7D8E4252736BB1F0077DD79 /* Alamofire */; };
+		E7D8E4292736BB600077DD79 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D8E4282736BB600077DD79 /* NetworkManager.swift */; };
+		E7D8E42D2736C6A10077DD79 /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D8E42C2736C6A10077DD79 /* NetworkAPI.swift */; };
+		E7D8E438273777300077DD79 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D8E437273777300077DD79 /* Message.swift */; };
+		E7D8E43B273777E60077DD79 /* SPIndicator in Frameworks */ = {isa = PBXBuildFile; productRef = E7D8E43A273777E60077DD79 /* SPIndicator */; };
+		E7D8E43D2737C2DB0077DD79 /* BitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D8E43C2737C2DB0077DD79 /* BitService.swift */; };
+		E7D8E43F2737D4810077DD79 /* BitClientAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D8E43E2737D4810077DD79 /* BitClientAppViewModel.swift */; };
+		E7D8E4412737FC3E0077DD79 /* UtilsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D8E4402737FC3E0077DD79 /* UtilsManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E732A35C2734C739008467FE /* AddTorrentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTorrentView.swift; sourceTree = "<group>"; };
+		E732A3612734C781008467FE /* AddTorrentNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTorrentNavigationBar.swift; sourceTree = "<group>"; };
+		E732A36727350CD1008467FE /* ServiceNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceNavigationBar.swift; sourceTree = "<group>"; };
+		E732A36C27351F9D008467FE /* AddTorrentLinkFormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTorrentLinkFormModel.swift; sourceTree = "<group>"; };
+		E757B7A627326DB300A59E1C /* TorrentItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorrentItem.swift; sourceTree = "<group>"; };
+		E77493A9273A831B00EE6703 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		E77493AC273A925400EE6703 /* PreferenceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceData.swift; sourceTree = "<group>"; };
+		E77493AF273A94FB00EE6703 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		E7A10E1D2738D0BD000C89D8 /* ServiceOfflineTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceOfflineTipView.swift; sourceTree = "<group>"; };
+		E7A10E202738D0F6000C89D8 /* ListEmptyTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEmptyTipView.swift; sourceTree = "<group>"; };
+		E7A34E322733BADC005F94E2 /* Maindata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maindata.swift; sourceTree = "<group>"; };
+		E7A34E362733C5E1005F94E2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E7BC55DE273266CD00AA2694 /* BitClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7BC55E1273266CD00AA2694 /* BitClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitClientApp.swift; sourceTree = "<group>"; };
+		E7BC55E5273266CE00AA2694 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E7BC55E8273266CE00AA2694 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E7BC55EA273266CE00AA2694 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7BC55F32732670500AA2694 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E7BC55F72732672300AA2694 /* HomeNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationBar.swift; sourceTree = "<group>"; };
+		E7D8E41027353F1B0077DD79 /* AboutNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutNavigationBar.swift; sourceTree = "<group>"; };
+		E7D8E41227357CED0077DD79 /* ServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceView.swift; sourceTree = "<group>"; };
+		E7D8E41D273603600077DD79 /* ServiceEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceEditView.swift; sourceTree = "<group>"; };
+		E7D8E41F273603760077DD79 /* ServiceEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceEditViewModel.swift; sourceTree = "<group>"; };
+		E7D8E422273605E10077DD79 /* NoServiceTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoServiceTipView.swift; sourceTree = "<group>"; };
+		E7D8E4282736BB600077DD79 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E7D8E42C2736C6A10077DD79 /* NetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
+		E7D8E437273777300077DD79 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		E7D8E43C2737C2DB0077DD79 /* BitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitService.swift; sourceTree = "<group>"; };
+		E7D8E43E2737D4810077DD79 /* BitClientAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitClientAppViewModel.swift; sourceTree = "<group>"; };
+		E7D8E4402737FC3E0077DD79 /* UtilsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E7BC55DB273266CD00AA2694 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7D8E4262736BB1F0077DD79 /* Alamofire in Frameworks */,
+				E7D8E43B273777E60077DD79 /* SPIndicator in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E732A35B2734C71B008467FE /* AddTorrent */ = {
+			isa = PBXGroup;
+			children = (
+				E732A35C2734C739008467FE /* AddTorrentView.swift */,
+				E732A3612734C781008467FE /* AddTorrentNavigationBar.swift */,
+			);
+			path = AddTorrent;
+			sourceTree = "<group>";
+		};
+		E732A36627350CB9008467FE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E732A36727350CD1008467FE /* ServiceNavigationBar.swift */,
+				E7D8E41227357CED0077DD79 /* ServiceView.swift */,
+				E7D8E41D273603600077DD79 /* ServiceEditView.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E732A36B27351F5B008467FE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E732A36C27351F9D008467FE /* AddTorrentLinkFormModel.swift */,
+				E7D8E41F273603760077DD79 /* ServiceEditViewModel.swift */,
+				E7D8E43E2737D4810077DD79 /* BitClientAppViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E7A34E312733BACF005F94E2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E7A34E322733BADC005F94E2 /* Maindata.swift */,
+				E7D8E43C2737C2DB0077DD79 /* BitService.swift */,
+				E77493AC273A925400EE6703 /* PreferenceData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E7BC55D5273266CD00AA2694 = {
+			isa = PBXGroup;
+			children = (
+				E77493AF273A94FB00EE6703 /* CHANGELOG.md */,
+				E7A34E362733C5E1005F94E2 /* README.md */,
+				E7BC55E0273266CD00AA2694 /* BitClient */,
+				E7BC55DF273266CD00AA2694 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E7BC55DF273266CD00AA2694 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E7BC55DE273266CD00AA2694 /* BitClient.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E7BC55E0273266CD00AA2694 /* BitClient */ = {
+			isa = PBXGroup;
+			children = (
+				E7D8E4272736BB480077DD79 /* Manager */,
+				E732A36B27351F5B008467FE /* ViewModel */,
+				E7A34E312733BACF005F94E2 /* Model */,
+				E7BC55F1273266EB00AA2694 /* View */,
+				E7BC55E1273266CD00AA2694 /* BitClientApp.swift */,
+				E7BC55E5273266CE00AA2694 /* Assets.xcassets */,
+				E7BC55EA273266CE00AA2694 /* Info.plist */,
+				E7BC55E7273266CE00AA2694 /* Preview Content */,
+			);
+			path = BitClient;
+			sourceTree = "<group>";
+		};
+		E7BC55E7273266CE00AA2694 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E7BC55E8273266CE00AA2694 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E7BC55F1273266EB00AA2694 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E7D8E421273605C70077DD79 /* Tips */,
+				E7D8E40F27353F010077DD79 /* About */,
+				E732A36627350CB9008467FE /* Service */,
+				E732A35B2734C71B008467FE /* AddTorrent */,
+				E7BC55F2273266F500AA2694 /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E7BC55F2273266F500AA2694 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E7BC55F32732670500AA2694 /* HomeView.swift */,
+				E7BC55F72732672300AA2694 /* HomeNavigationBar.swift */,
+				E757B7A627326DB300A59E1C /* TorrentItem.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E7D8E40F27353F010077DD79 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				E7D8E41027353F1B0077DD79 /* AboutNavigationBar.swift */,
+				E77493A9273A831B00EE6703 /* AboutView.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		E7D8E421273605C70077DD79 /* Tips */ = {
+			isa = PBXGroup;
+			children = (
+				E7D8E422273605E10077DD79 /* NoServiceTipView.swift */,
+				E7A10E1D2738D0BD000C89D8 /* ServiceOfflineTipView.swift */,
+				E7A10E202738D0F6000C89D8 /* ListEmptyTipView.swift */,
+			);
+			path = Tips;
+			sourceTree = "<group>";
+		};
+		E7D8E4272736BB480077DD79 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E7D8E4282736BB600077DD79 /* NetworkManager.swift */,
+				E7D8E42C2736C6A10077DD79 /* NetworkAPI.swift */,
+				E7D8E437273777300077DD79 /* Message.swift */,
+				E7D8E4402737FC3E0077DD79 /* UtilsManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E7BC55DD273266CD00AA2694 /* BitClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7BC55ED273266CE00AA2694 /* Build configuration list for PBXNativeTarget "BitClient" */;
+			buildPhases = (
+				E7BC55DA273266CD00AA2694 /* Sources */,
+				E7BC55DB273266CD00AA2694 /* Frameworks */,
+				E7BC55DC273266CD00AA2694 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BitClient;
+			packageProductDependencies = (
+				E7D8E4252736BB1F0077DD79 /* Alamofire */,
+				E7D8E43A273777E60077DD79 /* SPIndicator */,
+			);
+			productName = BitClient;
+			productReference = E7BC55DE273266CD00AA2694 /* BitClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E7BC55D6273266CD00AA2694 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					E7BC55DD273266CD00AA2694 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+				};
+			};
+			buildConfigurationList = E7BC55D9273266CD00AA2694 /* Build configuration list for PBXProject "BitClient" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E7BC55D5273266CD00AA2694;
+			packageReferences = (
+				E7D8E4242736BB1F0077DD79 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				E7D8E439273777E60077DD79 /* XCRemoteSwiftPackageReference "SPIndicator" */,
+			);
+			productRefGroup = E7BC55DF273266CD00AA2694 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E7BC55DD273266CD00AA2694 /* BitClient */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E7BC55DC273266CD00AA2694 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7BC55E9273266CE00AA2694 /* Preview Assets.xcassets in Resources */,
+				E7BC55E6273266CE00AA2694 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E7BC55DA273266CD00AA2694 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E732A36D27351F9D008467FE /* AddTorrentLinkFormModel.swift in Sources */,
+				E7D8E41327357CED0077DD79 /* ServiceView.swift in Sources */,
+				E7BC55F82732672300AA2694 /* HomeNavigationBar.swift in Sources */,
+				E7D8E438273777300077DD79 /* Message.swift in Sources */,
+				E7D8E43F2737D4810077DD79 /* BitClientAppViewModel.swift in Sources */,
+				E732A3622734C781008467FE /* AddTorrentNavigationBar.swift in Sources */,
+				E757B7A727326DB300A59E1C /* TorrentItem.swift in Sources */,
+				E7D8E423273605E10077DD79 /* NoServiceTipView.swift in Sources */,
+				E77493AD273A925400EE6703 /* PreferenceData.swift in Sources */,
+				E732A36827350CD1008467FE /* ServiceNavigationBar.swift in Sources */,
+				E7D8E4412737FC3E0077DD79 /* UtilsManager.swift in Sources */,
+				E7D8E41E273603600077DD79 /* ServiceEditView.swift in Sources */,
+				E7D8E41127353F1B0077DD79 /* AboutNavigationBar.swift in Sources */,
+				E7A10E212738D0F6000C89D8 /* ListEmptyTipView.swift in Sources */,
+				E77493AA273A831B00EE6703 /* AboutView.swift in Sources */,
+				E7A34E332733BADC005F94E2 /* Maindata.swift in Sources */,
+				E7BC55F42732670500AA2694 /* HomeView.swift in Sources */,
+				E7A10E1E2738D0BD000C89D8 /* ServiceOfflineTipView.swift in Sources */,
+				E7D8E420273603760077DD79 /* ServiceEditViewModel.swift in Sources */,
+				E7D8E43D2737C2DB0077DD79 /* BitService.swift in Sources */,
+				E7D8E4292736BB600077DD79 /* NetworkManager.swift in Sources */,
+				E7BC55E2273266CD00AA2694 /* BitClientApp.swift in Sources */,
+				E732A35D2734C739008467FE /* AddTorrentView.swift in Sources */,
+				E7D8E42D2736C6A10077DD79 /* NetworkAPI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E7BC55EB273266CE00AA2694 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E7BC55EC273266CE00AA2694 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E7BC55EE273266CE00AA2694 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"BitClient/Preview Content\"";
+				DEVELOPMENT_TEAM = UWL9677DYU;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = BitClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alanlang.BitClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E7BC55EF273266CE00AA2694 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"BitClient/Preview Content\"";
+				DEVELOPMENT_TEAM = UWL9677DYU;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = BitClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alanlang.BitClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E7BC55D9273266CD00AA2694 /* Build configuration list for PBXProject "BitClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7BC55EB273266CE00AA2694 /* Debug */,
+				E7BC55EC273266CE00AA2694 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7BC55ED273266CE00AA2694 /* Build configuration list for PBXNativeTarget "BitClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7BC55EE273266CE00AA2694 /* Debug */,
+				E7BC55EF273266CE00AA2694 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E7D8E4242736BB1F0077DD79 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		E7D8E439273777E60077DD79 /* XCRemoteSwiftPackageReference "SPIndicator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ivanvorobei/SPIndicator.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E7D8E4252736BB1F0077DD79 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E7D8E4242736BB1F0077DD79 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		E7D8E43A273777E60077DD79 /* SPIndicator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E7D8E439273777E60077DD79 /* XCRemoteSwiftPackageReference "SPIndicator" */;
+			productName = SPIndicator;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = E7BC55D6273266CD00AA2694 /* Project object */;
+}
