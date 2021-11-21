@@ -40,7 +40,7 @@ struct ServiceNavigationBar<ServiceConfigView>: View where ServiceConfigView : V
                     .frame(width: kButtonHeight, height: kButtonHeight)
                     .padding(.horizontal, 15)
                     .padding(.bottom, 5)
-                    .foregroundColor(.black)
+                    .foregroundColor(.primary)
             }
         }.frame(width: UIScreen.main.bounds.width)
     }

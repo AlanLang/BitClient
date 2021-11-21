@@ -23,7 +23,7 @@ class Theme {
         
         let navigationAppearance = UINavigationBarAppearance()
         navigationAppearance.configureWithOpaqueBackground()
-        navigationAppearance.backgroundColor = background ?? .clear
+        navigationAppearance.backgroundColor = UIColor.systemBackground
         
         navigationAppearance.titleTextAttributes = [.foregroundColor: titleColor ?? .black]
         navigationAppearance.largeTitleTextAttributes = [.foregroundColor: titleColor ?? .black]
