@@ -1,0 +1,29 @@
+{
+  "name": "BitClient",
+  "identifier": "com.alanlang.BitClient",
+  "sourceURL": "https://raw.githubusercontent.com/AlanLang/BitClient/main/AltStore.json",
+  "apps": [
+    {
+      "name": "BitClient",
+      "bundleIdentifier": "com.alanlang.BitClient",
+      "developerName": "AlanLang",
+      "version": "v1.0.2",
+      "versionDate": "2021-11-24T17:19:46",
+      "versionDescription": "允许从剪切板获取磁力链接",
+      "downloadURL": "https://github.com/AlanLang/BitClient/releases/download/V1.0.2/BitClient.ipa",
+      "localizedDescription": "一款用于 qBittorrent 的 ios 客户端",
+      "iconURL": "https://dada-image-bed.oss-cn-shenzhen.aliyuncs.com/bit-client.png",
+      "tintColor": "289979",
+      "size": 986112,
+      "screenshotURLs": [
+        "https://dada-image-bed.oss-cn-shenzhen.aliyuncs.com/BitClientScreen.png"
+      ],
+      "permissions": [
+        {
+          "type": "network",
+          "usageDescription": "Needs this permission to access the Internet."
+        }
+      ]
+    }
+  ]
+}
