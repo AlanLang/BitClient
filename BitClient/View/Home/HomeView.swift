@@ -53,7 +53,7 @@ struct HomeView: View {
                     bitService.delete(id: selectedKey, deleteFiles: false)
                     selectedKey = ""
                 }
-                Button("删除并删除文件") {
+                Button("删除并删除文件", role: .destructive) {
                     bitService.delete(id: selectedKey, deleteFiles: true)
                     selectedKey = ""
                 }
