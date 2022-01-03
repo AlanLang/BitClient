@@ -10,6 +10,7 @@ import SwiftUI
 
 class BitClientAppViewModel: ObservableObject {
     @Published var mainData: Maindata?
+    @Published var error: String = ""
     var timer: Timer? = nil
     
     init (){
@@ -37,7 +38,8 @@ class BitClientAppViewModel: ObservableObject {
                 case let .success(data):
                     self.mainData = data;
                 case let .failure(error):
-                    print(error.localizedDescription)
+                    self.error = "\(error)"
+                    print(error)
                 }
             }
         }

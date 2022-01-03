@@ -13,7 +13,7 @@ struct Maindata: Codable {
     let serverState: ServerState
     let tags: [String]
     let torrents: [String: Torrent]
-    let trackers: [String: [String]]
+    let trackers: [String: [String]]?
 
     enum CodingKeys: String, CodingKey {
         case categories

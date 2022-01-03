@@ -131,11 +131,13 @@ class NetworkAPi {
     }
     
     private static func parseData<T: Decodable>(_ data: Data) -> Result<T, Error> {
-        guard let decodedData = try? JSONDecoder().decode(T.self, from: data) else {
-            let error = NSError(domain: "NetworkApiError", code: 0, userInfo: ["NSLocalizedDescriptionKey": "数据解析出错"])
+        do {
+            let decodedData = try JSONDecoder().decode(T.self, from: data)
+            return .success(decodedData)
+        } catch {
+            print(error)
             return .failure(error)
         }
-        return .success(decodedData)
     }
     
     private static func getFormatUrl(_ url: String) -> String{
