@@ -22,7 +22,7 @@ struct HomeView: View {
             ListEmptyTipView()
         } else {
             List{
-                ForEach(torrents!.sorted{(s1, s2) -> Bool in return s1.value.addedOn == s2.value.addedOn ? s1.key < s2.key : s1.value.addedOn < s2.value.addedOn}, id: \.key){ key, torrent in
+                ForEach(torrents!.sorted{(s1, s2) -> Bool in return s1.value.addedOn == s2.value.addedOn ? s1.key < s2.key : s1.value.addedOn > s2.value.addedOn}, id: \.key){ key, torrent in
                     TorrentItem(torrent: torrent).frame(height: 70)
                         .swipeActions {
                             Button {
