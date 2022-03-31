@@ -12,7 +12,7 @@ private let kButtonHeight: CGFloat = 24;
 private let paddingTop: CGFloat = 5;
 
 struct AddTorrentNavigationBar: View {
-    @State var leftPercent: CGFloat;// 0: left; 1: right
+    @Binding var leftPercent: CGFloat;// 0: left; 1: right
     
     var body: some View {
         HStack(alignment: .top, spacing: 0) {
@@ -51,23 +51,6 @@ struct AddTorrentNavigationBar: View {
                 }.frame(height: 6)
             }.frame(width: UIScreen.main.bounds.width * 0.3)
             Spacer()
-            Button(action: {
-                print("click name action")
-            }) {
-                Image(systemName: "camera")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: kButtonHeight, height: kButtonHeight)
-                    .padding(.bottom, 5)
-                    .foregroundColor(.black)
-                    .hidden()// 暂时先不需要
-            }
         }.frame(width: UIScreen.main.bounds.width)
-    }
-}
-
-struct AddTorrentNavigationBar_Previews: PreviewProvider {
-    static var previews: some View {
-        AddTorrentNavigationBar(leftPercent: 0)
     }
 }

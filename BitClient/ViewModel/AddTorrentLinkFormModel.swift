@@ -70,6 +70,26 @@ class AddTorrentLinkFormModel: ObservableObject {
                     }
                 case let .failure(error):
                     Message.error(message: error.localizedDescription)
+                print(error.localizedDescription)
+                    completion(false)
+            }
+        }
+    }
+    
+    func downloadFile(fileUrl: URL,fileName: String, completion: @escaping (Bool) -> Void) {
+        NetworkAPi.downloadFile(fileUrl: fileUrl, fileName: fileName, model: self) {result in
+            switch result {
+                case let .success(data):
+                switch data {
+                    case "Ok.":
+                        Message.success(message: "添加成功", title: "磁力下载")
+                        completion(true)
+                    default:
+                        Message.error(message: data, title: "磁力下载")
+                        completion(false)
+                    }
+                case let .failure(error):
+                    Message.error(message: error.localizedDescription)
                     completion(false)
             }
         }
