@@ -20,27 +20,41 @@ func regexGetSub(pattern:String, str:String) -> String {
     return subStr
 }
 
+enum DownloadType: String, CaseIterable {
+    case url = "磁链"
+    case file = "种子"
+}
+
 struct AddTorrentLinkView: View {
     @ObservedObject private var addTorrentLinkFormModel: AddTorrentLinkFormModel
     @State private var showAlert = false
     @State private var copyUrl = ""
-    @Binding var downloadType: CGFloat;// 0: 磁力链接; 1: 种子
     
     @State var fileName = ""
     @State var fileUrl: URL = URL(string: "123")!
     @State var openFile = false
     
+    @State private var downloadType: DownloadType = .url
     
-    init(defaultSavePath: String, downloadType: Binding<CGFloat>) {
+    
+    init(defaultSavePath: String) {
         UITableView.appearance().sectionFooterHeight = 8
         addTorrentLinkFormModel = AddTorrentLinkFormModel(savepath: defaultSavePath)
-        self._downloadType = downloadType
     }
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     var body: some View {
         Form{
-            if(downloadType == 0) {
+            HStack(){
+                Picker("a", selection: $downloadType) {
+                    ForEach(DownloadType.allCases, id: \.self ) {
+                        Text($0.rawValue)
+                    }
+                }
+                .pickerStyle(SegmentedPickerStyle())
+            }.listRowBackground(Color(UIColor.systemGroupedBackground))
+            
+            if(downloadType == .url) {
                 Section(header: Text("磁力链接地址")) {
                     TextEditor(text: $addTorrentLinkFormModel.urls)
                         .frame(height: 100)
@@ -78,7 +92,7 @@ struct AddTorrentLinkView: View {
             ToolbarItem(placement: .navigationBarTrailing) {
                 HStack {
                     Button(action: {
-                        if(downloadType == 0) {
+                        if(downloadType == .url) {
                             if(addTorrentLinkFormModel.urls == "") {
                                 Message.warning(message: "下载地址不能为空", title: "磁力下载")
                             }else {
@@ -146,13 +160,11 @@ struct AddTorrentLinkView: View {
 
 struct AddTorrentView: View {
     var defaultSavePath: String
-    @State private var selectedIndex: CGFloat = 0
     
     var body: some View {
-        AddTorrentLinkView(defaultSavePath: defaultSavePath, downloadType: $selectedIndex)
+        AddTorrentLinkView(defaultSavePath: defaultSavePath)
         .listStyle(PlainListStyle())
-        .navigationBarItems(leading: AddTorrentNavigationBar(leftPercent: $selectedIndex))
-        .navigationBarTitle(Text("磁力下载"), displayMode: .inline)
+        .navigationBarTitle(Text("下载"), displayMode: .inline)
     }
 }
 
