@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+import UniformTypeIdentifiers
+
+
 func regexGetSub(pattern:String, str:String) -> String {
     var subStr = ""
     let regex = try! NSRegularExpression(pattern: pattern, options:[])
@@ -17,10 +20,22 @@ func regexGetSub(pattern:String, str:String) -> String {
     return subStr
 }
 
+enum DownloadType: String, CaseIterable {
+    case url = "磁链"
+    case file = "种子"
+}
+
 struct AddTorrentLinkView: View {
     @ObservedObject private var addTorrentLinkFormModel: AddTorrentLinkFormModel
     @State private var showAlert = false
     @State private var copyUrl = ""
+    
+    @State var fileName = ""
+    @State var fileUrl: URL = URL(string: "123")!
+    @State var openFile = false
+    
+    @State private var downloadType: DownloadType = .url
+    
     
     init(defaultSavePath: String) {
         UITableView.appearance().sectionFooterHeight = 8
@@ -30,11 +45,28 @@ struct AddTorrentLinkView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     var body: some View {
         Form{
-            Section(header: Text("磁力链接地址")) {
-                TextEditor(text: $addTorrentLinkFormModel.urls)
-                    .frame(height: 100)
-            }
+            HStack(){
+                Picker("a", selection: $downloadType) {
+                    ForEach(DownloadType.allCases, id: \.self ) {
+                        Text($0.rawValue)
+                    }
+                }
+                .pickerStyle(SegmentedPickerStyle())
+            }.listRowBackground(Color(UIColor.systemGroupedBackground))
             
+            if(downloadType == .url) {
+                Section(header: Text("磁力链接地址")) {
+                    TextEditor(text: $addTorrentLinkFormModel.urls)
+                        .frame(height: 100)
+                }
+            } else {
+                Section(header: Text("种子文件")) {
+                    Button(action: {openFile.toggle()}, label: {
+                        Text(fileName == "" ? "请选择种子文件" : fileName)
+                    })
+                }
+            }
+
             Section(header: Text("下载设置")) {
                 TextField("保存文件到", text: $addTorrentLinkFormModel.savepath)
                 TextField("重命名", text: $addTorrentLinkFormModel.rename)
@@ -44,19 +76,44 @@ struct AddTorrentLinkView: View {
                 Toggle("跳过哈希值", isOn: $addTorrentLinkFormModel.skip_checking)
             }
         }
+        .fileImporter(isPresented: $openFile, allowedContentTypes: [UTType(filenameExtension: "torrent")!]) { res in
+            do {
+                fileUrl = try res.get()
+                if fileUrl.startAccessingSecurityScopedResource() {
+                    fileName = fileUrl.lastPathComponent
+                }
+                print(fileUrl)
+            }catch {
+                print("error reading docs")
+                print(error.localizedDescription)
+            }
+        }
         .toolbar{
             ToolbarItem(placement: .navigationBarTrailing) {
                 HStack {
                     Button(action: {
-                        if(addTorrentLinkFormModel.urls == "") {
-                            Message.warning(message: "下载地址不能为空", title: "磁力下载")
-                        }else {
-                            addTorrentLinkFormModel.download() { result in
-                                if(result) {
-                                    self.mode.wrappedValue.dismiss()
+                        if(downloadType == .url) {
+                            if(addTorrentLinkFormModel.urls == "") {
+                                Message.warning(message: "下载地址不能为空", title: "磁力下载")
+                            }else {
+                                addTorrentLinkFormModel.download() { result in
+                                    if(result) {
+                                        self.mode.wrappedValue.dismiss()
+                                    }
+                                }
+                            }
+                        } else {
+                            if(fileName == "") {
+                                Message.warning(message: "请选择要下载的种子文件", title: "种子下载")
+                            } else {
+                                addTorrentLinkFormModel.downloadFile(fileUrl: fileUrl, fileName: fileName) { result in
+                                    if(result) {
+                                        self.mode.wrappedValue.dismiss()
+                                    }
                                 }
                             }
                         }
+                        
                     }, label: {
                         Image(systemName: "square.and.arrow.down")
                             .resizable()
@@ -103,15 +160,19 @@ struct AddTorrentLinkView: View {
 
 struct AddTorrentView: View {
     var defaultSavePath: String
+    
     var body: some View {
         AddTorrentLinkView(defaultSavePath: defaultSavePath)
         .listStyle(PlainListStyle())
-        .navigationBarTitle(Text("磁力下载"), displayMode: .inline)
+        .navigationBarTitle(Text("下载"), displayMode: .inline)
     }
 }
 
 struct AddTorrentView_Previews: PreviewProvider {
     static var previews: some View {
-        AddTorrentView(defaultSavePath: "")
+        Group {
+            AddTorrentView(defaultSavePath: "")
+            AddTorrentView(defaultSavePath: "")
+        }
     }
 }

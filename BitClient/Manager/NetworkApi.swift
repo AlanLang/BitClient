@@ -82,6 +82,33 @@ class NetworkAPi {
         }
     }
     
+    static func downloadFile(fileUrl: URL, fileName: String, model: AddTorrentLinkFormModel, completion: @escaping (Result<String, Error>) -> Void){
+        let parameters: [String: String] = [
+            "savepath": model.savepath,
+            "paused": String(model.paused),
+            "root_folder": String(model.root_folder),
+            "sequentialDownload": String(model.sequentialDownload),
+            "skip_checking": String(model.skip_checking),
+            "rename": model.rename
+        ]
+        
+        NetworkManager.shared.sendFile(path: self.basicUrl + "/api/v2/torrents/add", fileURL: fileUrl, fileName: fileName, parameters: parameters) {result in
+            switch result {
+                case let .success(data):
+                    let utf8Text = String(data: data, encoding: .utf8)
+                    if(utf8Text == nil) {
+                        let error = NSError(domain: "NetworkApiError", code: 0, userInfo: ["NSLocalizedDescriptionKey": "数据解析出错"])
+                        completion(.failure(error))
+                    }else{
+                        completion(.success(utf8Text ?? ""))
+                    }
+                case let .failure(error):
+                    completion(.failure(error))
+            }
+            
+        }
+    }
+    
     // 暂停
     static func pause(id: String, completion: @escaping (Result<Bool, Error>) -> Void){
         NetworkManager.shared.requestPost(path: self.basicUrl + "/api/v2/torrents/pause", parameters: ["hashes": id]) { result in

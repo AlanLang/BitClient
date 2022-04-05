@@ -48,6 +48,27 @@ class NetworkManager {
             }
     }
     
+    @discardableResult
+    func sendFile(path: String, fileURL: URL, fileName: String, parameters:Dictionary<String, String>, completion: @escaping NetworkRequestCompletion) {
+        AF.upload(multipartFormData: {multiPart in
+            for (key, value) in parameters {
+                multiPart.append(value.data(using: .utf8)!, withName: key)
+            }
+            do {
+                let fileData = try? Data(contentsOf: fileURL)
+                multiPart.append(fileData!, withName: "file", fileName: fileName, mimeType: "application/octet-stream")
+            }
+            
+        }, to: path, method: .post ).responseData(emptyResponseCodes: [200, 204, 205]){response in
+            switch response.result {
+            case let .success(data):
+                completion(.success(data))
+            case let .failure(error):
+                completion(self.handleError(error))
+            }
+        }
+    }
+    
     private func handleError(_ error: AFError) -> NetworkRequestResult {
             if let underlyingError = error.underlyingError {
                 let nserror = underlyingError as NSError

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E732A35D2734C739008467FE /* AddTorrentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E732A35C2734C739008467FE /* AddTorrentView.swift */; };
-		E732A3622734C781008467FE /* AddTorrentNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E732A3612734C781008467FE /* AddTorrentNavigationBar.swift */; };
 		E732A36827350CD1008467FE /* ServiceNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E732A36727350CD1008467FE /* ServiceNavigationBar.swift */; };
 		E732A36D27351F9D008467FE /* AddTorrentLinkFormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E732A36C27351F9D008467FE /* AddTorrentLinkFormModel.swift */; };
 		E757B7A727326DB300A59E1C /* TorrentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E757B7A627326DB300A59E1C /* TorrentItem.swift */; };
@@ -39,7 +38,6 @@
 
 /* Begin PBXFileReference section */
 		E732A35C2734C739008467FE /* AddTorrentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTorrentView.swift; sourceTree = "<group>"; };
-		E732A3612734C781008467FE /* AddTorrentNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTorrentNavigationBar.swift; sourceTree = "<group>"; };
 		E732A36727350CD1008467FE /* ServiceNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceNavigationBar.swift; sourceTree = "<group>"; };
 		E732A36C27351F9D008467FE /* AddTorrentLinkFormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTorrentLinkFormModel.swift; sourceTree = "<group>"; };
 		E757B7A627326DB300A59E1C /* TorrentItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorrentItem.swift; sourceTree = "<group>"; };
@@ -87,7 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				E732A35C2734C739008467FE /* AddTorrentView.swift */,
-				E732A3612734C781008467FE /* AddTorrentNavigationBar.swift */,
 			);
 			path = AddTorrent;
 			sourceTree = "<group>";
@@ -297,7 +294,6 @@
 				E7BC55F82732672300AA2694 /* HomeNavigationBar.swift in Sources */,
 				E7D8E438273777300077DD79 /* Message.swift in Sources */,
 				E7D8E43F2737D4810077DD79 /* BitClientAppViewModel.swift in Sources */,
-				E732A3622734C781008467FE /* AddTorrentNavigationBar.swift in Sources */,
 				E757B7A727326DB300A59E1C /* TorrentItem.swift in Sources */,
 				E7D8E423273605E10077DD79 /* NoServiceTipView.swift in Sources */,
 				E77493AD273A925400EE6703 /* PreferenceData.swift in Sources */,
