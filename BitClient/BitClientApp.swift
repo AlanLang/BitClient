@@ -99,6 +99,7 @@ struct ContentView: View {
             .navigationBarItems(leading: navigationBarLeadingItems)
             .navigationBarTitle(Text(tabTitle[selectedIndex]), displayMode: .inline)
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         .onChange(of: scenePhase) { newScenePhase in
             switch newScenePhase {
             case .active:
