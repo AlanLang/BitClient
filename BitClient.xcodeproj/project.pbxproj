@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E703D24B297A3C1F000A13C7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E703D24A297A3C1F000A13C7 /* LoginView.swift */; };
+		E703D24E297A42ED000A13C7 /* LoadingButton in Frameworks */ = {isa = PBXBuildFile; productRef = E703D24D297A42ED000A13C7 /* LoadingButton */; };
 		E732A35D2734C739008467FE /* AddTorrentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E732A35C2734C739008467FE /* AddTorrentView.swift */; };
 		E732A36827350CD1008467FE /* ServiceNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E732A36727350CD1008467FE /* ServiceNavigationBar.swift */; };
 		E732A36D27351F9D008467FE /* AddTorrentLinkFormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E732A36C27351F9D008467FE /* AddTorrentLinkFormModel.swift */; };
 		E757B7A727326DB300A59E1C /* TorrentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E757B7A627326DB300A59E1C /* TorrentItem.swift */; };
 		E77493AA273A831B00EE6703 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77493A9273A831B00EE6703 /* AboutView.swift */; };
 		E77493AD273A925400EE6703 /* PreferenceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77493AC273A925400EE6703 /* PreferenceData.swift */; };
+		E79B70E5297AB755001DB23D /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79B70E4297AB755001DB23D /* AppState.swift */; };
 		E7A10E1E2738D0BD000C89D8 /* ServiceOfflineTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A10E1D2738D0BD000C89D8 /* ServiceOfflineTipView.swift */; };
 		E7A10E212738D0F6000C89D8 /* ListEmptyTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A10E202738D0F6000C89D8 /* ListEmptyTipView.swift */; };
 		E7A34E332733BADC005F94E2 /* Maindata.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A34E322733BADC005F94E2 /* Maindata.swift */; };
@@ -37,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E703D24A297A3C1F000A13C7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E732A35C2734C739008467FE /* AddTorrentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTorrentView.swift; sourceTree = "<group>"; };
 		E732A36727350CD1008467FE /* ServiceNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceNavigationBar.swift; sourceTree = "<group>"; };
 		E732A36C27351F9D008467FE /* AddTorrentLinkFormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTorrentLinkFormModel.swift; sourceTree = "<group>"; };
@@ -44,6 +48,7 @@
 		E77493A9273A831B00EE6703 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		E77493AC273A925400EE6703 /* PreferenceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceData.swift; sourceTree = "<group>"; };
 		E77493AF273A94FB00EE6703 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		E79B70E4297AB755001DB23D /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		E7A10E1D2738D0BD000C89D8 /* ServiceOfflineTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceOfflineTipView.swift; sourceTree = "<group>"; };
 		E7A10E202738D0F6000C89D8 /* ListEmptyTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEmptyTipView.swift; sourceTree = "<group>"; };
 		E7A34E322733BADC005F94E2 /* Maindata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maindata.swift; sourceTree = "<group>"; };
@@ -74,6 +79,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7D8E4262736BB1F0077DD79 /* Alamofire in Frameworks */,
+				E703D24E297A42ED000A13C7 /* LoadingButton in Frameworks */,
 				E7D8E43B273777E60077DD79 /* SPIndicator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E703D249297A3BFD000A13C7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E703D24A297A3C1F000A13C7 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		E732A35B2734C71B008467FE /* AddTorrent */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +119,7 @@
 				E732A36C27351F9D008467FE /* AddTorrentLinkFormModel.swift */,
 				E7D8E41F273603760077DD79 /* ServiceEditViewModel.swift */,
 				E7D8E43E2737D4810077DD79 /* BitClientAppViewModel.swift */,
+				E79B70E4297AB755001DB23D /* AppState.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -163,6 +178,7 @@
 		E7BC55F1273266EB00AA2694 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E703D249297A3BFD000A13C7 /* Login */,
 				E7D8E421273605C70077DD79 /* Tips */,
 				E7D8E40F27353F010077DD79 /* About */,
 				E732A36627350CB9008467FE /* Service */,
@@ -231,6 +247,7 @@
 			packageProductDependencies = (
 				E7D8E4252736BB1F0077DD79 /* Alamofire */,
 				E7D8E43A273777E60077DD79 /* SPIndicator */,
+				E703D24D297A42ED000A13C7 /* LoadingButton */,
 			);
 			productName = BitClient;
 			productReference = E7BC55DE273266CD00AA2694 /* BitClient.app */;
@@ -262,6 +279,7 @@
 			packageReferences = (
 				E7D8E4242736BB1F0077DD79 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				E7D8E439273777E60077DD79 /* XCRemoteSwiftPackageReference "SPIndicator" */,
+				E703D24C297A42ED000A13C7 /* XCRemoteSwiftPackageReference "LoadingButton" */,
 			);
 			productRefGroup = E7BC55DF273266CD00AA2694 /* Products */;
 			projectDirPath = "";
@@ -295,6 +313,7 @@
 				E7D8E438273777300077DD79 /* Message.swift in Sources */,
 				E7D8E43F2737D4810077DD79 /* BitClientAppViewModel.swift in Sources */,
 				E757B7A727326DB300A59E1C /* TorrentItem.swift in Sources */,
+				E703D24B297A3C1F000A13C7 /* LoginView.swift in Sources */,
 				E7D8E423273605E10077DD79 /* NoServiceTipView.swift in Sources */,
 				E77493AD273A925400EE6703 /* PreferenceData.swift in Sources */,
 				E732A36827350CD1008467FE /* ServiceNavigationBar.swift in Sources */,
@@ -304,6 +323,7 @@
 				E7A10E212738D0F6000C89D8 /* ListEmptyTipView.swift in Sources */,
 				E77493AA273A831B00EE6703 /* AboutView.swift in Sources */,
 				E7A34E332733BADC005F94E2 /* Maindata.swift in Sources */,
+				E79B70E5297AB755001DB23D /* AppState.swift in Sources */,
 				E7BC55F42732670500AA2694 /* HomeView.swift in Sources */,
 				E7A10E1E2738D0BD000C89D8 /* ServiceOfflineTipView.swift in Sources */,
 				E7D8E420273603760077DD79 /* ServiceEditViewModel.swift in Sources */,
@@ -443,7 +463,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"BitClient/Preview Content\"";
-				DEVELOPMENT_TEAM = UWL9677DYU;
+				DEVELOPMENT_TEAM = RA66Z3Q63F;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BitClient/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -468,7 +488,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"BitClient/Preview Content\"";
-				DEVELOPMENT_TEAM = UWL9677DYU;
+				DEVELOPMENT_TEAM = RA66Z3Q63F;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BitClient/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -508,6 +528,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E703D24C297A42ED000A13C7 /* XCRemoteSwiftPackageReference "LoadingButton" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Changemin/LoadingButton";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		E7D8E4242736BB1F0077DD79 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -527,6 +555,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E703D24D297A42ED000A13C7 /* LoadingButton */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E703D24C297A42ED000A13C7 /* XCRemoteSwiftPackageReference "LoadingButton" */;
+			productName = LoadingButton;
+		};
 		E7D8E4252736BB1F0077DD79 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E7D8E4242736BB1F0077DD79 /* XCRemoteSwiftPackageReference "Alamofire" */;
