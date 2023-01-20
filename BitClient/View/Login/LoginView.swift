@@ -11,52 +11,62 @@ import LoadingButton
 let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0);
 
 struct LoginView: View {
-    @State var url: String = "";
-    @State var username: String = "";
-    @State var password: String  = "";
+    @EnvironmentObject var state: AppState
     @State var isLoading: Bool = false
     
     var body: some View {
         VStack {
             AppImage()
             AppText()
-            TextField("服务器地址", text: $url)
+            TextField("服务器地址", text: $state.url)
                 .padding()
                 .background(lightGreyColor)
                 .cornerRadius(5.0)
                 .padding(.bottom, 20)
-            TextField("用户名", text: $username)
+            TextField("用户名", text: $state.username)
                 .padding()
                 .background(lightGreyColor)
                 .cornerRadius(5.0)
                 .padding(.bottom, 20)
-            SecureField("密码", text: $password)
+            SecureField("密码", text: $state.password)
                 .padding()
                 .background(lightGreyColor)
                 .cornerRadius(5.0)
                 .padding(.bottom, 20)
             LoadingButton(action: {
                 print("login");
-                if (url == "") {
+                if (state.url == "") {
                     Message.warning(message: "服务器地址不能为空");
                     DispatchQueue.main.asyncAfter(deadline: .now()) {
                         self.isLoading = false
                     }
                     return;
                 }
-                if (username == "") {
+                if (state.username == "") {
                     Message.warning(message: "用户名不能为空");
                     DispatchQueue.main.asyncAfter(deadline: .now()) {
                         self.isLoading = false
                     }
                     return;
                 }
-                if (password == "") {
+                if (state.password == "") {
                     Message.warning(message: "密码不能为空");
                     DispatchQueue.main.asyncAfter(deadline: .now()) {
                         self.isLoading = false
                     }
                     return;
+                }
+                state.test() {
+                    result in if (result) {
+                        state.save();
+                        DispatchQueue.main.asyncAfter(deadline: .now()) {
+                            self.isLoading = false
+                        }
+                    }else{
+                        DispatchQueue.main.asyncAfter(deadline: .now()) {
+                            self.isLoading = false
+                        }
+                    }
                 }
             }, isLoading: $isLoading, style: LoadingButtonStyle(cornerRadius: 27, backgroundColor: .orange)) {
                 Text("登录").foregroundColor(Color.white)
@@ -97,11 +107,5 @@ struct AppText: View {
             .font(.largeTitle)
             .fontWeight(.semibold)
             .padding(.top, 1)
-    }
-}
-
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
     }
 }

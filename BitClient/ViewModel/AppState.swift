@@ -1,13 +1,12 @@
 //
-//  ServiceEditViewModel.swift
+//  AppState.swift
 //  BitClient
 //
-//  Created by Alan on 2021/11/6.
+//  Created by alan lang on 2023/1/20.
 //
 
-import SwiftUI
-
-class ServiceEditViewModel: ObservableObject {
+import Foundation
+class AppState: ObservableObject {
     @Published var url: String = ""
     @Published var username: String = ""
     @Published var password: String = ""
@@ -18,14 +17,6 @@ class ServiceEditViewModel: ObservableObject {
         self.password = UserDefaults.standard.string(forKey: "service.password") ?? ""
         self.username = UserDefaults.standard.string(forKey: "service.username") ?? ""
         self.isLogin = UserDefaults.standard.bool(forKey: "app.islogin")
-    }
-    
-    func save(){
-        self.isLogin = true
-        UserDefaults.standard.set(self.url, forKey: "service.url")
-        UserDefaults.standard.set(self.password, forKey: "service.password")
-        UserDefaults.standard.set(self.username, forKey: "service.username")
-        UserDefaults.standard.set(true, forKey: "app.islogin")
     }
     
     func test(completion: @escaping (Bool) -> Void){
@@ -53,5 +44,18 @@ class ServiceEditViewModel: ObservableObject {
                     Message.error(message: error.localizedDescription)
             }
         }
+    }
+    
+    func save(){
+        self.isLogin = true
+        UserDefaults.standard.set(self.url, forKey: "service.url")
+        UserDefaults.standard.set(self.password, forKey: "service.password")
+        UserDefaults.standard.set(self.username, forKey: "service.username")
+        UserDefaults.standard.set(true, forKey: "app.islogin")
+    }
+    
+    func logOut(){
+        self.isLogin = false
+        UserDefaults.standard.set(false, forKey: "app.islogin")
     }
 }

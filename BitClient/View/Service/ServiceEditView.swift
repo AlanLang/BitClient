@@ -30,7 +30,7 @@ struct ServiceEditView: View {
                     } else if (serviceEditViewModel.password == "") {
                         Message.warning(message: "密码不能为空")
                     } else {
-                        serviceEditViewModel.test()
+//                        serviceEditViewModel.test()
                     }
                 })
             }

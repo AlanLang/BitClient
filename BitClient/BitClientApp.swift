@@ -10,9 +10,16 @@ import SwiftUI
 
 @main
 struct BitClientApp: App {
+    @StateObject var appState = AppState()
+
+    
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            if (appState.isLogin) {
+                ContentView().environmentObject(appState)
+            } else {
+                LoginView().environmentObject(appState)
+            }
         }
     }
 }
@@ -63,6 +70,7 @@ struct ContentView: View {
     }
     
     init(){
+        bitClientAppViewModel.start()
         Theme.navigationBarColors(background: .white, titleColor: .black)
     }
     

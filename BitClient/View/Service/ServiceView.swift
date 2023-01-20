@@ -10,6 +10,7 @@ import SwiftUI
 struct ServiceView: View {
     var bitService = BitService()
     var serverState: ServerState?
+    @EnvironmentObject var state: AppState
     
     init(serverState: ServerState?) {
         UITableView.appearance().sectionFooterHeight = 4
@@ -80,6 +81,12 @@ struct ServiceView: View {
                         Text(String(serverState!.dhtNodes))
                             .foregroundColor(.gray)
                     }
+                }
+                
+                Section {
+                    Button("退出登录", action: {
+                        state.logOut()
+                    })
                 }
             }
         }

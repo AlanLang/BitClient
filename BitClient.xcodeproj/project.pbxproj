@@ -15,6 +15,7 @@
 		E757B7A727326DB300A59E1C /* TorrentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E757B7A627326DB300A59E1C /* TorrentItem.swift */; };
 		E77493AA273A831B00EE6703 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77493A9273A831B00EE6703 /* AboutView.swift */; };
 		E77493AD273A925400EE6703 /* PreferenceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77493AC273A925400EE6703 /* PreferenceData.swift */; };
+		E79B70E5297AB755001DB23D /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79B70E4297AB755001DB23D /* AppState.swift */; };
 		E7A10E1E2738D0BD000C89D8 /* ServiceOfflineTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A10E1D2738D0BD000C89D8 /* ServiceOfflineTipView.swift */; };
 		E7A10E212738D0F6000C89D8 /* ListEmptyTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A10E202738D0F6000C89D8 /* ListEmptyTipView.swift */; };
 		E7A34E332733BADC005F94E2 /* Maindata.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A34E322733BADC005F94E2 /* Maindata.swift */; };
@@ -47,6 +48,7 @@
 		E77493A9273A831B00EE6703 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		E77493AC273A925400EE6703 /* PreferenceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceData.swift; sourceTree = "<group>"; };
 		E77493AF273A94FB00EE6703 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		E79B70E4297AB755001DB23D /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		E7A10E1D2738D0BD000C89D8 /* ServiceOfflineTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceOfflineTipView.swift; sourceTree = "<group>"; };
 		E7A10E202738D0F6000C89D8 /* ListEmptyTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEmptyTipView.swift; sourceTree = "<group>"; };
 		E7A34E322733BADC005F94E2 /* Maindata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maindata.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				E732A36C27351F9D008467FE /* AddTorrentLinkFormModel.swift */,
 				E7D8E41F273603760077DD79 /* ServiceEditViewModel.swift */,
 				E7D8E43E2737D4810077DD79 /* BitClientAppViewModel.swift */,
+				E79B70E4297AB755001DB23D /* AppState.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				E7A10E212738D0F6000C89D8 /* ListEmptyTipView.swift in Sources */,
 				E77493AA273A831B00EE6703 /* AboutView.swift in Sources */,
 				E7A34E332733BADC005F94E2 /* Maindata.swift in Sources */,
+				E79B70E5297AB755001DB23D /* AppState.swift in Sources */,
 				E7BC55F42732670500AA2694 /* HomeView.swift in Sources */,
 				E7A10E1E2738D0BD000C89D8 /* ServiceOfflineTipView.swift in Sources */,
 				E7D8E420273603760077DD79 /* ServiceEditViewModel.swift in Sources */,

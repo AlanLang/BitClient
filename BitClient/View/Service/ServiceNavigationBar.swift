@@ -41,6 +41,7 @@ struct ServiceNavigationBar<ServiceConfigView>: View where ServiceConfigView : V
                     .padding(.horizontal, 15)
                     .padding(.bottom, 5)
                     .foregroundColor(.primary)
+                    .hidden()
             }
         }.frame(width: UIScreen.main.bounds.width)
     }
