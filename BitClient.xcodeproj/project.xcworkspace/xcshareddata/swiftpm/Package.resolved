@@ -1,25 +1,23 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "Alamofire",
-        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
-        "state": {
-          "branch": null,
-          "revision": "d120af1e8638c7da36c8481fd61a66c0c08dc4fc",
-          "version": "5.4.4"
-        }
-      },
-      {
-        "package": "SPIndicator",
-        "repositoryURL": "https://github.com/ivanvorobei/SPIndicator.git",
-        "state": {
-          "branch": null,
-          "revision": "bf89051dbbabf302804c237cc4b8fa324805432c",
-          "version": "1.4.1"
-        }
+  "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire.git",
+      "state" : {
+        "revision" : "d120af1e8638c7da36c8481fd61a66c0c08dc4fc",
+        "version" : "5.4.4"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "spindicator",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ivanvorobei/SPIndicator.git",
+      "state" : {
+        "revision" : "646c939984ceae0073e17dc4c231b7a866551b04",
+        "version" : "1.4.1"
+      }
+    }
+  ],
+  "version" : 2
 }
