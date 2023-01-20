@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E703D24B297A3C1F000A13C7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E703D24A297A3C1F000A13C7 /* LoginView.swift */; };
+		E703D24E297A42ED000A13C7 /* LoadingButton in Frameworks */ = {isa = PBXBuildFile; productRef = E703D24D297A42ED000A13C7 /* LoadingButton */; };
 		E732A35D2734C739008467FE /* AddTorrentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E732A35C2734C739008467FE /* AddTorrentView.swift */; };
 		E732A36827350CD1008467FE /* ServiceNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E732A36727350CD1008467FE /* ServiceNavigationBar.swift */; };
 		E732A36D27351F9D008467FE /* AddTorrentLinkFormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E732A36C27351F9D008467FE /* AddTorrentLinkFormModel.swift */; };
@@ -76,6 +77,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7D8E4262736BB1F0077DD79 /* Alamofire in Frameworks */,
+				E703D24E297A42ED000A13C7 /* LoadingButton in Frameworks */,
 				E7D8E43B273777E60077DD79 /* SPIndicator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +244,7 @@
 			packageProductDependencies = (
 				E7D8E4252736BB1F0077DD79 /* Alamofire */,
 				E7D8E43A273777E60077DD79 /* SPIndicator */,
+				E703D24D297A42ED000A13C7 /* LoadingButton */,
 			);
 			productName = BitClient;
 			productReference = E7BC55DE273266CD00AA2694 /* BitClient.app */;
@@ -273,6 +276,7 @@
 			packageReferences = (
 				E7D8E4242736BB1F0077DD79 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				E7D8E439273777E60077DD79 /* XCRemoteSwiftPackageReference "SPIndicator" */,
+				E703D24C297A42ED000A13C7 /* XCRemoteSwiftPackageReference "LoadingButton" */,
 			);
 			productRefGroup = E7BC55DF273266CD00AA2694 /* Products */;
 			projectDirPath = "";
@@ -520,6 +524,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E703D24C297A42ED000A13C7 /* XCRemoteSwiftPackageReference "LoadingButton" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Changemin/LoadingButton";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		E7D8E4242736BB1F0077DD79 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -539,6 +551,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E703D24D297A42ED000A13C7 /* LoadingButton */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E703D24C297A42ED000A13C7 /* XCRemoteSwiftPackageReference "LoadingButton" */;
+			productName = LoadingButton;
+		};
 		E7D8E4252736BB1F0077DD79 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E7D8E4242736BB1F0077DD79 /* XCRemoteSwiftPackageReference "Alamofire" */;

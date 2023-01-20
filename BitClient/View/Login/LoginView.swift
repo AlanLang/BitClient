@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import LoadingButton
 
 let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0);
 
@@ -13,6 +14,7 @@ struct LoginView: View {
     @State var url: String = "";
     @State var username: String = "";
     @State var password: String  = "";
+    @State var isLoading: Bool = false
     
     var body: some View {
         VStack {
@@ -33,11 +35,32 @@ struct LoginView: View {
                 .background(lightGreyColor)
                 .cornerRadius(5.0)
                 .padding(.bottom, 20)
-            Button(action: {
-                print("login")
-            }, label: {
-                LoginBottonContent()
-            })
+            LoadingButton(action: {
+                print("login");
+                if (url == "") {
+                    Message.warning(message: "服务器地址不能为空");
+                    DispatchQueue.main.asyncAfter(deadline: .now()) {
+                        self.isLoading = false
+                    }
+                    return;
+                }
+                if (username == "") {
+                    Message.warning(message: "用户名不能为空");
+                    DispatchQueue.main.asyncAfter(deadline: .now()) {
+                        self.isLoading = false
+                    }
+                    return;
+                }
+                if (password == "") {
+                    Message.warning(message: "密码不能为空");
+                    DispatchQueue.main.asyncAfter(deadline: .now()) {
+                        self.isLoading = false
+                    }
+                    return;
+                }
+            }, isLoading: $isLoading, style: LoadingButtonStyle(cornerRadius: 27, backgroundColor: .orange)) {
+                Text("登录").foregroundColor(Color.white)
+            }
 
         }
         .padding()

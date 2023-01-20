@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "loadingbutton",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Changemin/LoadingButton",
+      "state" : {
+        "revision" : "5045668df822a04c248a9b40aca888a4d37f275a",
+        "version" : "1.1.2"
+      }
+    },
+    {
       "identity" : "spindicator",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ivanvorobei/SPIndicator.git",
