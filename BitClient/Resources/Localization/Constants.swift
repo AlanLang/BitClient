@@ -38,4 +38,12 @@ struct Constants {
         static let noService = "Tips.noService".localized(moduleName: constants)
         static let offline = "Tips.offline".localized(moduleName: constants)
     }
+    
+    struct Utils {
+        static let daysAgo = "Utils.daysAgo".localized(moduleName: constants)
+        static let hoursAgo = "Utils.hoursAgo".localized(moduleName: constants)
+        static let minutesAgo = "Utils.minutesAgo".localized(moduleName: constants)
+        static let just = "Utils.just".localized(moduleName: constants)
+        static let formatter = "Utils.dateFormatter".localized(moduleName: constants)
+    }
 }

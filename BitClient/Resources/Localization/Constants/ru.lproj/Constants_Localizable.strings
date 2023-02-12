@@ -24,3 +24,10 @@
 "Tips.noContent" = "Список пуст";
 "Tips.noService" = "Настройте сперва сервер";
 "Tips.offline" = "Нет доступа к серверу, проверьте подключение";
+
+// Utils
+"Utils.daysAgo" = "дней назад";
+"Utils.hoursAgo" = "часов назад";
+"Utils.minutesAgo" = "минут назад";
+"Utils.just" = "только что";
+"Utils.dateFormatter" = "yyyy-MM-dd";

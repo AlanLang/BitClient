@@ -28,6 +28,15 @@
 "Tips.noService" = "尚未配置服务器数据";
 "Empty.offline" = "无法访问服务器，请检查网络连接";
 
+// Utils
+"Utils.daysAgo" = "天前";
+"Utils.hoursAgo" = "小时前";
+"Utils.minutesAgo" = "分钟前";
+"Utils.just" = "刚刚";
+"Utils.dateFormatter" = "yy年MM月dd日";
+
+
+
 
 
 

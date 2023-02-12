@@ -24,3 +24,10 @@
 "Tips.noContent" = "Nothing to show";
 "Tips.noService" = "Server data has not been configured";
 "Tips.offline" = "Unable to access server, please check network connection";
+
+// Utils
+"Utils.daysAgo" = "days ago";
+"Utils.hoursAgo" = "hours ago";
+"Utils.minutesAgo" = "minutes ago";
+"Utils.just" = "just now";
+"Utils.dateFormatter" = "yyyy-MM-dd";
