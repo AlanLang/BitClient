@@ -1,0 +1,14 @@
+/* 
+  Constants_Localizable.strings
+  BitClient
+
+  Created by Vladimir Valter on 12.02.23.
+  
+*/
+
+"LoginPage.serverAdress" = "服务器地址";
+"LoginPage.login" = "用户名";
+"LoginPage.password" = "密码";
+"LoginPage.buttonTitle" = "登录";
+
+

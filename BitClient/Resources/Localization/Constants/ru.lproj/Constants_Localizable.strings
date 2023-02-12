@@ -1,0 +1,11 @@
+/* 
+  Constants_Localizable.strings
+  BitClient
+
+  Created by Vladimir Valter on 12.02.23.
+  
+*/
+"LoginPage.serverAdress" = "Адрес сервера";
+"LoginPage.login" = "Логин";
+"LoginPage.password" = "Пароль";
+"LoginPage.buttonTitle" = "Авторизоваться";
