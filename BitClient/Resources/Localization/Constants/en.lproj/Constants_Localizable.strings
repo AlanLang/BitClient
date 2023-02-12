@@ -9,3 +9,18 @@
 "LoginPage.login" = "Login";
 "LoginPage.password" = "Password";
 "LoginPage.buttonTitle" = "Sign in";
+
+// Navigation
+"NavBar.Home.all" = "All";
+"NavBar.Home.active" = "Active";
+"NavBar.Home.pause" = "Paused";
+
+// TabBar
+"TabBar.list" = "List";
+"TabBar.server" = "Server";
+"TabBar.about" = "About";
+
+// Tips
+"Tips.noContent" = "Nothing to show";
+"Tips.noService" = "Server data has not been configured";
+"Tips.offline" = "Unable to access server, please check network connection";

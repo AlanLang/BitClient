@@ -10,7 +10,7 @@ import SwiftUI
 struct NoServiceTipView: View {
     var body: some View {
         VStack {
-            Text("尚未配置服务器数据").foregroundColor(.gray)
+            Text(Constants.Tips.noService).foregroundColor(.gray)
         }.frame(height: UIScreen.main.bounds.height)
     }
 }

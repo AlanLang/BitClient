@@ -32,7 +32,7 @@ struct HomeNavigationBar<AddView>: View where AddView : View {
             Spacer()
             VStack(spacing: 3) {
                 HStack(spacing: 0) {
-                    Text("全部")
+                    Text(Constants.NavBar.Home.all)
                         .bold()
                         .frame(width: kLabelWidth, height: kButtonHeight)
                         .padding(.top, paddingTop)
@@ -43,7 +43,7 @@ struct HomeNavigationBar<AddView>: View where AddView : View {
                             }
                         }
                     Spacer()
-                    Text("活动")
+                    Text(Constants.NavBar.Home.active)
                         .bold()
                         .frame(width: kLabelWidth, height: kButtonHeight)
                         .padding(.top, paddingTop)
@@ -54,7 +54,7 @@ struct HomeNavigationBar<AddView>: View where AddView : View {
                             }
                         }
                     Spacer()
-                    Text("暂停")
+                    Text(Constants.NavBar.Home.pause)
                         .bold()
                         .frame(width: kLabelWidth, height: kButtonHeight)
                         .padding(.top, paddingTop)

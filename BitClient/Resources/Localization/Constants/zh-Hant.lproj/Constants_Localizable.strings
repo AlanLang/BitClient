@@ -6,9 +6,29 @@
   
 */
 
+// Login
 "LoginPage.serverAdress" = "服务器地址";
 "LoginPage.login" = "用户名";
 "LoginPage.password" = "密码";
 "LoginPage.buttonTitle" = "登录";
+
+// Navigation
+"NavBar.Home.all" = "全部";
+"NavBar.Home.active" = "活动";
+"NavBar.Home.pause" = "暂停";
+
+
+// TabBar
+"TabBar.list" = "列表";
+"TabBar.server" = "服务器";
+"TabBar.about" = "关于我";
+
+// Tips
+"Tips.noContent" = "列表内容为空";
+"Tips.noService" = "尚未配置服务器数据";
+"Empty.offline" = "无法访问服务器，请检查网络连接";
+
+
+
 
 

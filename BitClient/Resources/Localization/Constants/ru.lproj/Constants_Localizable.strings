@@ -9,3 +9,18 @@
 "LoginPage.login" = "Логин";
 "LoginPage.password" = "Пароль";
 "LoginPage.buttonTitle" = "Авторизоваться";
+
+// Navigation
+"NavBar.Home.all" = "Все";
+"NavBar.Home.active" = "Активные";
+"NavBar.Home.pause" = "На паузе";
+
+// TabBar
+"TabBar.list" = "Список";
+"TabBar.server" = "Сервер";
+"TabBar.about" = "Обо мне";
+
+// Tips
+"Tips.noContent" = "Список пуст";
+"Tips.noService" = "Настройте сперва сервер";
+"Tips.offline" = "Нет доступа к серверу, проверьте подключение";
