@@ -59,4 +59,43 @@ struct Constants {
         static let numberOfNodes = "Server.numberOfNodes".localized(moduleName: constants)
         static let signOut = "Server.signOut".localized(moduleName: constants)
     }
+    
+    struct About {
+        static let web = "About.web".localized(moduleName: constants)
+        static let license = "About.license".localized(moduleName: constants)
+        static let changelog = "About.changelog".localized(moduleName: constants)
+    }
+    
+    struct Add {
+        static let magnet = "Add.magnet".localized(moduleName: constants)
+        static let file = "Add.file".localized(moduleName: constants)
+        static let magnetUrl = "Add.magnetUrl".localized(moduleName: constants)
+        static let torrentFile = "Add.torrentFile".localized(moduleName: constants)
+        static let selectTorrent = "Add.selectTorrent".localized(moduleName: constants)
+        static let downloadSettings = "Add.downloadSettings".localized(moduleName: constants)
+        static let savePath = "Add.savePath".localized(moduleName: constants)
+        static let rename = "Add.rename".localized(moduleName: constants)
+        static let pauseAfterAdding = "Add.pauseAfterAdding".localized(moduleName: constants)
+        static let rootFolder = "Add.rootFolder".localized(moduleName: constants)
+        static let sequentialDownload = "Add.sequentialDownload".localized(moduleName: constants)
+        static let skipChecking = "Add.skipChecking".localized(moduleName: constants)
+        
+        struct Warnings {
+            static let emptyMessage = "Add.Warnings.emptyMessage".localized(moduleName: constants)
+            static let emptyTitle = "Add.Warnings.emptyTitle".localized(moduleName: constants)
+            static let fileMessage = "Add.Warnings.fileMessage".localized(moduleName: constants)
+            static let fileTitle = "Add.Warnings.fileTitle".localized(moduleName: constants)
+        }
+        
+        struct Alert {
+            static let title = "Add.Alert.title".localized(moduleName: constants)
+            static let message = "Add.Alert.message".localized(moduleName: constants)
+            static let primaryButton = "Add.Alert.primaryButton".localized(moduleName: constants)
+            static let secondaryButton = "Add.Alert.secondaryButton".localized(moduleName: constants)
+        }
+        
+        struct NavBar {
+            static let title = "Add.NavBar.title".localized(moduleName: constants)
+        }
+    }
 }

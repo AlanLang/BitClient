@@ -41,4 +41,35 @@
 "Server.totalDownloads" = "всего загрузок";
 "Server.totalUploads" = "всего отдач";
 "Server.numberOfNodes" = "количество узлов";
-"Server.signOut" = "выйти";
+"Server.signOut" = "Выйти";
+
+// About
+"About.web" = "Сайт";
+"About.license" = "Лицензия";
+"About.changelog" = "Список изменений";
+
+// Add torrent
+"Add.magnet" = "Магнитная ссылка";
+"Add.file" = "Торрент файл";
+"Add.magnetUrl" = "Адрес магнитной ссылки";
+"Add.torrentFile" = "торрент-файл";
+"Add.selectTorrent" = "Пожалуйста, выберите торрент-файл";
+"Add.downloadSettings" = "Настройки загрузки";
+"Add.savePath" = "Сохранить файл в";
+"Add.rename" = "Переименовать";
+"Add.pauseAfterAdding" = "Пауза после добавления";
+"Add.rootFolder" = "Корневая директория";
+"Add.sequentialDownload" = "Порядок загрузки";
+"Add.skipChecking" = "Не проверять";
+
+"Add.Warnings.emptyMessage" = "Адрес загрузки не может быть пустым";
+"Add.Warnings.emptyTitle" = "Магнитная загрузка";
+"Add.Warnings.fileMessage" = "Пожалуйста, выберите торрент-файл для скачивания";
+"Add.Warnings.fileTitle" = "скачать торрент";
+
+"Add.Alert.title" = "Подсказка";
+"Add.Alert.message" = "Мы бнаружили, что вы скопировали магнет-ссылку, добавить прямо в загрузки?";
+"Add.Alert.primaryButton" = "Нет";
+"Add.Alert.secondaryButton" = "Добавить";
+
+"Add.NavBar.title" = "Загрузка";

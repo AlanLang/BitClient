@@ -46,7 +46,36 @@
 "Server.numberOfNodes" = "节点数";
 "Server.signOut" = "退出登录";
 
+// About
+"About.web" = "网站";
+"About.license" = "开源协议";
+"About.changelog" = "更新说明";
 
+// Add torrent
+"Add.magnet" = "磁链";
+"Add.file" = "种子";
+"Add.magnetUrl" = "磁力链接地址";
+"Add.torrentFile" = "种子文件";
+"Add.selectTorrent" = "请选择种子文件";
+"Add.downloadSettings" = "下载设置";
+"Add.savePath" = "保存文件到";
+"Add.rename" = "重命名";
+"Add.pauseAfterAdding" = "添加后暂停";
+"Add.rootFolder" = "保留顶层文件";
+"Add.sequentialDownload" = "按顺序下载";
+"Add.skipChecking" = "跳过哈希值";
+
+"Add.Warnings.emptyMessage" = "下载地址不能为空";
+"Add.Warnings.emptyTitle" = "磁力下载";
+"Add.Warnings.fileMessage" = "请选择要下载的种子文件";
+"Add.Warnings.fileTitle" = "种子下载";
+
+"Add.Alert.title" = "提示";
+"Add.Alert.message" = "检测到您复制了磁力链接，是否直接添加到下载？";
+"Add.Alert.primaryButton" = "不要";
+"Add.Alert.secondaryButton" = "添加";
+
+"Add.NavBar.title" = "下载";
 
 
 
