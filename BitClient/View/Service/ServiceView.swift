@@ -26,13 +26,13 @@ struct ServiceView: View {
             Form {
                 Section {
                     HStack {
-                        Text("磁盘剩余空间")
+                        Text(Constants.Server.freeDiskSpace)
                         Spacer()
                         Text(UtilsManager.getSizeText(serverState!.freeSpaceOnDisk))
                             .foregroundColor(.gray)
                     }
                     HStack {
-                        Text("平均分享率")
+                        Text(Constants.Server.averageShareRate)
                         Spacer()
                         Text(String(serverState!.globalRatio))
                             .foregroundColor(.gray)
@@ -41,18 +41,18 @@ struct ServiceView: View {
                 
                 Section {
                     HStack {
-                        Text("下载速度")
+                        Text(Constants.Server.downloadSpeed)
                         Spacer()
                         Text(UtilsManager.getSizeText(serverState!.dlInfoSpeed) + "/S")
                             .foregroundColor(.gray)
                     }
                     HStack {
-                        Text("上传速度")
+                        Text(Constants.Server.uploadSpeed)
                         Spacer()
                         Text(UtilsManager.getSizeText(serverState!.upInfoSpeed) + "/S")
                             .foregroundColor(.gray)
                     }
-                    Toggle("备用速度限制", isOn: Binding<Bool>(
+                    Toggle(Constants.Server.alternateSpeedLimit, isOn: Binding<Bool>(
                         get: { serverState!.useAltSpeedLimits },
                         set: {
                             print("value: \($0)")
@@ -64,19 +64,19 @@ struct ServiceView: View {
                 
                 Section {
                     HStack {
-                        Text("下载总量")
+                        Text(Constants.Server.totalDownloads)
                         Spacer()
                         Text(UtilsManager.getSizeText(serverState!.dlInfoData))
                             .foregroundColor(.gray)
                     }
                     HStack {
-                        Text("上传总量")
+                        Text(Constants.Server.totalUploads)
                         Spacer()
                         Text(UtilsManager.getSizeText(serverState!.upInfoData))
                             .foregroundColor(.gray)
                     }
                     HStack {
-                        Text("节点数")
+                        Text(Constants.Server.numberOfNodes)
                         Spacer()
                         Text(String(serverState!.dhtNodes))
                             .foregroundColor(.gray)
@@ -84,7 +84,7 @@ struct ServiceView: View {
                 }
                 
                 Section {
-                    Button("退出登录", action: {
+                    Button(Constants.Server.signOut, action: {
                         state.logOut()
                     })
                 }

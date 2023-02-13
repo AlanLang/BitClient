@@ -31,3 +31,14 @@
 "Utils.minutesAgo" = "минут назад";
 "Utils.just" = "только что";
 "Utils.dateFormatter" = "yyyy-MM-dd";
+
+// Server
+"Server.freeDiskSpace" = "свободное место на диске";
+"Server.averageShareRate" = "коэфициент раздачи";
+"Server.downloadSpeed" = "скорость загрузки";
+"Server.uploadSpeed" = "скорость отдачи";
+"Server.alternateSpeedLimit" = "альтернативная скорость";
+"Server.totalDownloads" = "всего загрузок";
+"Server.totalUploads" = "всего отдач";
+"Server.numberOfNodes" = "количество узлов";
+"Server.signOut" = "выйти";

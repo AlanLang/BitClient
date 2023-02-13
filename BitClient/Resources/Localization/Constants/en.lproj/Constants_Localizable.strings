@@ -31,3 +31,14 @@
 "Utils.minutesAgo" = "minutes ago";
 "Utils.just" = "just now";
 "Utils.dateFormatter" = "yyyy-MM-dd";
+
+// Server
+"Server.freeDiskSpace" = "free disk space";
+"Server.averageShareRate" = "average share rate";
+"Server.downloadSpeed" = "download speed";
+"Server.uploadSpeed" = "upload speed";
+"Server.alternateSpeedLimit" = "alternate speed limit";
+"Server.totalDownloads" = "total downloads";
+"Server.totalUploads" = "Total uploads";
+"Server.numberOfNodes" = "Number of nodes";
+"Server.signOut" = "sign out";

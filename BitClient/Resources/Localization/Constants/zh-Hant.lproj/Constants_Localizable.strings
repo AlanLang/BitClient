@@ -35,6 +35,17 @@
 "Utils.just" = "刚刚";
 "Utils.dateFormatter" = "yy年MM月dd日";
 
+// Server
+"Server.freeDiskSpace" = "磁盘剩余空间";
+"Server.averageShareRate" = "平均分享率";
+"Server.downloadSpeed" = "下载速度";
+"Server.uploadSpeed" = "上传速度";
+"Server.alternateSpeedLimit" = "备用速度限制";
+"Server.totalDownloads" = "下载总量";
+"Server.totalUploads" = "上传总量";
+"Server.numberOfNodes" = "节点数";
+"Server.signOut" = "退出登录";
+
 
 
 

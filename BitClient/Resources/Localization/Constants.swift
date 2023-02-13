@@ -46,4 +46,17 @@ struct Constants {
         static let just = "Utils.just".localized(moduleName: constants)
         static let formatter = "Utils.dateFormatter".localized(moduleName: constants)
     }
+    
+    struct Server {
+
+        static let freeDiskSpace = "Server.freeDiskSpace".localized(moduleName: constants)
+        static let averageShareRate = "Server.averageShareRate".localized(moduleName: constants)
+        static let downloadSpeed = "Server.downloadSpeed".localized(moduleName: constants)
+        static let uploadSpeed = "Server.uploadSpeed".localized(moduleName: constants)
+        static let alternateSpeedLimit = "Server.alternateSpeedLimit".localized(moduleName: constants)
+        static let totalDownloads = "Server.totalDownloads".localized(moduleName: constants)
+        static let totalUploads = "Server.totalUploads".localized(moduleName: constants)
+        static let numberOfNodes = "Server.numberOfNodes".localized(moduleName: constants)
+        static let signOut = "Server.signOut".localized(moduleName: constants)
+    }
 }
