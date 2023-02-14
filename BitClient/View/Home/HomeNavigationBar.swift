@@ -64,12 +64,16 @@ struct HomeNavigationBar<AddView>: View where AddView : View {
                                 self.leftPercent = 1;
                             }
                         }
-                }.font(.system(size: 18))
+                }
+                .font(.system(size: 18))
+                .scaledToFit()
+                .minimumScaleFactor(0.5)
+                .lineLimit(1)
                 
                 GeometryReader{geometry in HStack(spacing: 0) {
                     RoundedRectangle(cornerRadius: 2)
                         .foregroundColor(.blue)
-                        .frame(width: 30, height: 4)
+                        .frame(width: geometry.size.width / 3, height: 4)
                         .offset(x: geometry.size.width * (self.leftPercent - 0.5) + kLabelWidth * (0.5 - self.leftPercent))
                     }.frame(width: geometry.size.width, height: geometry.size.height)
                 }.frame(height: 6)
