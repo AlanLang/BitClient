@@ -39,7 +39,6 @@ struct AboutView: View {
             }
             Form {
                 UrlLink(title: Constants.About.web, linkTitle: "BitClient", url: "https://github.com/AlanLang/BitClient")
-                UrlLink(title: "Telegram", linkTitle: "@alan2333", url: "https://t.me/alan2333")
                 UrlLink(title: Constants.About.license, linkTitle: "GPL v3.0", url: "https://github.com/AlanLang/BitClient/blob/main/LICENSE")
                 UrlLink(title: Constants.About.changelog, linkTitle: "", url: "https://github.com/AlanLang/BitClient/blob/main/CHANGELOG.md")
             }
