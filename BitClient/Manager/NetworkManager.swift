@@ -48,7 +48,6 @@ class NetworkManager {
             }
     }
     
-    @discardableResult
     func sendFile(path: String, fileURL: URL, fileName: String, parameters:Dictionary<String, String>, completion: @escaping NetworkRequestCompletion) {
         AF.upload(multipartFormData: {multiPart in
             for (key, value) in parameters {

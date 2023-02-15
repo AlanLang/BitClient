@@ -10,7 +10,7 @@ import SwiftUI
 struct ListEmptyTipView: View {
     var body: some View {
         VStack {
-            Text("列表内容为空").foregroundColor(.gray)
+            Text(Constants.Tips.noContent).foregroundColor(.gray)
         }.frame(height: UIScreen.main.bounds.height)
     }
 }

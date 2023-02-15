@@ -1,0 +1,75 @@
+/* 
+  Constants_Localizable.strings
+  BitClient
+
+  Created by Vladimir Valter on 12.02.23.
+  
+*/
+"LoginPage.serverAdress" = "Адрес сервера";
+"LoginPage.login" = "Логин";
+"LoginPage.password" = "Пароль";
+"LoginPage.buttonTitle" = "Авторизоваться";
+
+// Navigation
+"NavBar.Home.all" = "Все";
+"NavBar.Home.active" = "Активные";
+"NavBar.Home.pause" = "На паузе";
+
+// TabBar
+"TabBar.list" = "Список";
+"TabBar.server" = "Сервер";
+"TabBar.about" = "Обо мне";
+
+// Tips
+"Tips.noContent" = "Список пуст";
+"Tips.noService" = "Настройте сперва сервер";
+"Tips.offline" = "Нет доступа к серверу, проверьте подключение";
+
+// Utils
+"Utils.daysAgo" = "дней назад";
+"Utils.hoursAgo" = "часов назад";
+"Utils.minutesAgo" = "минут назад";
+"Utils.just" = "только что";
+"Utils.dateFormatter" = "yyyy-MM-dd";
+
+// Server
+"Server.freeDiskSpace" = "свободное место на диске";
+"Server.averageShareRate" = "коэфициент раздачи";
+"Server.downloadSpeed" = "скорость загрузки";
+"Server.uploadSpeed" = "скорость отдачи";
+"Server.alternateSpeedLimit" = "альтернативная скорость";
+"Server.totalDownloads" = "всего загрузок";
+"Server.totalUploads" = "всего отдач";
+"Server.numberOfNodes" = "количество узлов";
+"Server.signOut" = "Выйти";
+
+// About
+"About.web" = "Сайт";
+"About.license" = "Лицензия";
+"About.changelog" = "Список изменений";
+
+// Add torrent
+"Add.magnet" = "Магнитная ссылка";
+"Add.file" = "Торрент файл";
+"Add.magnetUrl" = "Адрес магнитной ссылки";
+"Add.torrentFile" = "торрент-файл";
+"Add.selectTorrent" = "Пожалуйста, выберите торрент-файл";
+"Add.downloadSettings" = "Настройки загрузки";
+"Add.savePath" = "Сохранить файл в";
+"Add.rename" = "Переименовать";
+"Add.pauseAfterAdding" = "Пауза после добавления";
+"Add.rootFolder" = "Корневая директория";
+"Add.sequentialDownload" = "Порядок загрузки";
+"Add.skipChecking" = "Не проверять";
+
+"Add.Warnings.emptyMessage" = "Адрес загрузки не может быть пустым";
+"Add.Warnings.emptyTitle" = "Магнитная загрузка";
+"Add.Warnings.fileMessage" = "Пожалуйста, выберите торрент-файл для скачивания";
+"Add.Warnings.fileTitle" = "скачать торрент";
+
+"Add.Alert.title" = "Подсказка";
+"Add.Alert.message" = "Мы бнаружили, что вы скопировали магнет-ссылку, добавить прямо в загрузки?";
+"Add.Alert.primaryButton" = "Нет";
+"Add.Alert.secondaryButton" = "Добавить";
+
+"Add.NavBar.title" = "Загрузка";

@@ -1,0 +1,75 @@
+/* 
+  Constants_Localizable.strings
+  BitClient
+
+  Created by Vladimir Valter on 12.02.23.
+  
+*/
+"LoginPage.serverAdress" = "Server Address";
+"LoginPage.login" = "Login";
+"LoginPage.password" = "Password";
+"LoginPage.buttonTitle" = "Sign in";
+
+// Navigation
+"NavBar.Home.all" = "All";
+"NavBar.Home.active" = "Active";
+"NavBar.Home.pause" = "Paused";
+
+// TabBar
+"TabBar.list" = "List";
+"TabBar.server" = "Server";
+"TabBar.about" = "About";
+
+// Tips
+"Tips.noContent" = "Nothing to show";
+"Tips.noService" = "Server data has not been configured";
+"Tips.offline" = "Unable to access server, please check network connection";
+
+// Utils
+"Utils.daysAgo" = "days ago";
+"Utils.hoursAgo" = "hours ago";
+"Utils.minutesAgo" = "minutes ago";
+"Utils.just" = "just now";
+"Utils.dateFormatter" = "yyyy-MM-dd";
+
+// Server
+"Server.freeDiskSpace" = "free disk space";
+"Server.averageShareRate" = "average share rate";
+"Server.downloadSpeed" = "download speed";
+"Server.uploadSpeed" = "upload speed";
+"Server.alternateSpeedLimit" = "alternate speed limit";
+"Server.totalDownloads" = "total downloads";
+"Server.totalUploads" = "Total uploads";
+"Server.numberOfNodes" = "Number of nodes";
+"Server.signOut" = "sign out";
+
+// About
+"About.web" = "Web";
+"About.license" = "License";
+"About.changelog" = "Changelog";
+
+// Add torrent
+"Add.magnet" = "Magnetic link";
+"Add.file" = "File";
+"Add.magnetUrl" = "Magnet link address";
+"Add.torrentFile" = "Torrent file";
+"Add.selectTorrent" = "Please select a torrent file";
+"Add.downloadSettings" = "Download settings";
+"Add.savePath" = "Save file to";
+"Add.rename" = "Rename";
+"Add.pauseAfterAdding" = "Pause after adding";
+"Add.rootFolder" = "Root folder";
+"Add.sequentialDownload" = "Sequential download";
+"Add.skipChecking" = "Skip checkng";
+
+"Add.Warnings.emptyMessage" = "The download address cannot be empty";
+"Add.Warnings.emptyTitle" = "Magnetic download";
+"Add.Warnings.fileMessage" = "Please select a torrent file to download";
+"Add.Warnings.fileTitle" = "Torrent download";
+
+"Add.Alert.title" = "Hint";
+"Add.Alert.message" = "Detected that you copied a magnet link, add directly to downloads?";
+"Add.Alert.primaryButton" = "No";
+"Add.Alert.secondaryButton" = "Add";
+
+"Add.NavBar.title" = "Download";

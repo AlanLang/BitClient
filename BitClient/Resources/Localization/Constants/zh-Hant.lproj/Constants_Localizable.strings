@@ -1,0 +1,83 @@
+/* 
+  Constants_Localizable.strings
+  BitClient
+
+  Created by Vladimir Valter on 12.02.23.
+  
+*/
+
+// Login
+"LoginPage.serverAdress" = "服务器地址";
+"LoginPage.login" = "用户名";
+"LoginPage.password" = "密码";
+"LoginPage.buttonTitle" = "登录";
+
+// Navigation
+"NavBar.Home.all" = "全部";
+"NavBar.Home.active" = "活动";
+"NavBar.Home.pause" = "暂停";
+
+
+// TabBar
+"TabBar.list" = "列表";
+"TabBar.server" = "服务器";
+"TabBar.about" = "关于我";
+
+// Tips
+"Tips.noContent" = "列表内容为空";
+"Tips.noService" = "尚未配置服务器数据";
+"Empty.offline" = "无法访问服务器，请检查网络连接";
+
+// Utils
+"Utils.daysAgo" = "天前";
+"Utils.hoursAgo" = "小时前";
+"Utils.minutesAgo" = "分钟前";
+"Utils.just" = "刚刚";
+"Utils.dateFormatter" = "yy年MM月dd日";
+
+// Server
+"Server.freeDiskSpace" = "磁盘剩余空间";
+"Server.averageShareRate" = "平均分享率";
+"Server.downloadSpeed" = "下载速度";
+"Server.uploadSpeed" = "上传速度";
+"Server.alternateSpeedLimit" = "备用速度限制";
+"Server.totalDownloads" = "下载总量";
+"Server.totalUploads" = "上传总量";
+"Server.numberOfNodes" = "节点数";
+"Server.signOut" = "退出登录";
+
+// About
+"About.web" = "网站";
+"About.license" = "开源协议";
+"About.changelog" = "更新说明";
+
+// Add torrent
+"Add.magnet" = "磁链";
+"Add.file" = "种子";
+"Add.magnetUrl" = "磁力链接地址";
+"Add.torrentFile" = "种子文件";
+"Add.selectTorrent" = "请选择种子文件";
+"Add.downloadSettings" = "下载设置";
+"Add.savePath" = "保存文件到";
+"Add.rename" = "重命名";
+"Add.pauseAfterAdding" = "添加后暂停";
+"Add.rootFolder" = "保留顶层文件";
+"Add.sequentialDownload" = "按顺序下载";
+"Add.skipChecking" = "跳过哈希值";
+
+"Add.Warnings.emptyMessage" = "下载地址不能为空";
+"Add.Warnings.emptyTitle" = "磁力下载";
+"Add.Warnings.fileMessage" = "请选择要下载的种子文件";
+"Add.Warnings.fileTitle" = "种子下载";
+
+"Add.Alert.title" = "提示";
+"Add.Alert.message" = "检测到您复制了磁力链接，是否直接添加到下载？";
+"Add.Alert.primaryButton" = "不要";
+"Add.Alert.secondaryButton" = "添加";
+
+"Add.NavBar.title" = "下载";
+
+
+
+
+

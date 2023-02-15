@@ -46,7 +46,7 @@ class Theme {
 struct ContentView: View {
     @State private var selectedIndex: Int = 0
     @State private var homeMenu: CGFloat = 0;
-    private let tabTitle = ["列表","服务器","关于我"]
+    private let tabTitle = [Constants.TabBar.list, Constants.TabBar.server, Constants.TabBar.about]
     @ObservedObject private var bitClientAppViewModel  = BitClientAppViewModel();
     @Environment(\.scenePhase) var scenePhase
     

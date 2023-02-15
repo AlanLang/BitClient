@@ -10,7 +10,7 @@ import SwiftUI
 struct ServiceOfflineTipView: View {
     var body: some View {
         VStack {
-            Text("无法访问服务器，请检查网络连接").foregroundColor(.gray)
+            Text(Constants.Tips.offline).foregroundColor(.gray)
         }.frame(height: UIScreen.main.bounds.height)
     }
 }

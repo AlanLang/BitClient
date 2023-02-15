@@ -18,17 +18,17 @@ struct LoginView: View {
         VStack {
             AppImage()
             AppText()
-            TextField("服务器地址", text: $state.url)
+            TextField(Constants.LoginPage.serverAddress, text: $state.url)
                 .padding()
                 .background(lightGreyColor)
                 .cornerRadius(5.0)
                 .padding(.bottom, 20)
-            TextField("用户名", text: $state.username)
+            TextField(Constants.LoginPage.login, text: $state.username)
                 .padding()
                 .background(lightGreyColor)
                 .cornerRadius(5.0)
                 .padding(.bottom, 20)
-            SecureField("密码", text: $state.password)
+            SecureField(Constants.LoginPage.password, text: $state.password)
                 .padding()
                 .background(lightGreyColor)
                 .cornerRadius(5.0)
@@ -69,7 +69,7 @@ struct LoginView: View {
                     }
                 }
             }, isLoading: $isLoading, style: LoadingButtonStyle(cornerRadius: 27, backgroundColor: .orange)) {
-                Text("登录").foregroundColor(Color.white)
+                Text(Constants.LoginPage.buttonTitle).foregroundColor(Color.white)
             }
 
         }

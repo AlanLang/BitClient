@@ -23,6 +23,15 @@ func regexGetSub(pattern:String, str:String) -> String {
 enum DownloadType: String, CaseIterable {
     case url = "磁链"
     case file = "种子"
+    
+    var localizedText: String {
+        switch self {
+        case .url:
+            return Constants.Add.magnet
+        case .file:
+            return Constants.Add.file
+        }
+    }
 }
 
 struct AddTorrentLinkView: View {
@@ -48,32 +57,32 @@ struct AddTorrentLinkView: View {
             HStack(){
                 Picker("a", selection: $downloadType) {
                     ForEach(DownloadType.allCases, id: \.self ) {
-                        Text($0.rawValue)
+                        Text($0.localizedText)
                     }
                 }
                 .pickerStyle(SegmentedPickerStyle())
             }.listRowBackground(Color(UIColor.systemGroupedBackground))
             
             if(downloadType == .url) {
-                Section(header: Text("磁力链接地址")) {
+                Section(header: Text(Constants.Add.magnetUrl)) {
                     TextEditor(text: $addTorrentLinkFormModel.urls)
                         .frame(height: 100)
                 }
             } else {
-                Section(header: Text("种子文件")) {
+                Section(header: Text(Constants.Add.torrentFile)) {
                     Button(action: {openFile.toggle()}, label: {
-                        Text(fileName == "" ? "请选择种子文件" : fileName)
+                        Text(fileName == "" ? Constants.Add.selectTorrent : fileName)
                     })
                 }
             }
 
-            Section(header: Text("下载设置")) {
-                TextField("保存文件到", text: $addTorrentLinkFormModel.savepath)
-                TextField("重命名", text: $addTorrentLinkFormModel.rename)
-                Toggle("添加后暂停", isOn: $addTorrentLinkFormModel.paused)
-                Toggle("保留顶层文件", isOn: $addTorrentLinkFormModel.root_folder)
-                Toggle("按顺序下载", isOn: $addTorrentLinkFormModel.sequentialDownload)
-                Toggle("跳过哈希值", isOn: $addTorrentLinkFormModel.skip_checking)
+            Section(header: Text(Constants.Add.downloadSettings)) {
+                TextField(Constants.Add.savePath, text: $addTorrentLinkFormModel.savepath)
+                TextField(Constants.Add.rename, text: $addTorrentLinkFormModel.rename)
+                Toggle(Constants.Add.pauseAfterAdding, isOn: $addTorrentLinkFormModel.paused)
+                Toggle(Constants.Add.rootFolder, isOn: $addTorrentLinkFormModel.root_folder)
+                Toggle(Constants.Add.sequentialDownload, isOn: $addTorrentLinkFormModel.sequentialDownload)
+                Toggle(Constants.Add.skipChecking, isOn: $addTorrentLinkFormModel.skip_checking)
             }
         }
         .fileImporter(isPresented: $openFile, allowedContentTypes: [UTType(filenameExtension: "torrent")!]) { res in
@@ -94,7 +103,7 @@ struct AddTorrentLinkView: View {
                     Button(action: {
                         if(downloadType == .url) {
                             if(addTorrentLinkFormModel.urls == "") {
-                                Message.warning(message: "下载地址不能为空", title: "磁力下载")
+                                Message.warning(message: Constants.Add.Warnings.emptyMessage, title: Constants.Add.Warnings.emptyTitle)
                             }else {
                                 addTorrentLinkFormModel.download() { result in
                                     if(result) {
@@ -104,7 +113,7 @@ struct AddTorrentLinkView: View {
                             }
                         } else {
                             if(fileName == "") {
-                                Message.warning(message: "请选择要下载的种子文件", title: "种子下载")
+                                Message.warning(message: Constants.Add.Warnings.fileMessage, title: Constants.Add.Warnings.fileTitle)
                             } else {
                                 addTorrentLinkFormModel.downloadFile(fileUrl: fileUrl, fileName: fileName) { result in
                                     if(result) {
@@ -128,16 +137,16 @@ struct AddTorrentLinkView: View {
         }
         .alert(isPresented: $showAlert) {
                 Alert(
-                    title: Text("提示"),
-                    message: Text("检测到您复制了磁力链接，是否直接添加到下载？"),
+                    title: Text(Constants.Add.Alert.title),
+                    message: Text(Constants.Add.Alert.message),
                     primaryButton: .default(
-                        Text("不要"),
+                        Text(Constants.Add.Alert.primaryButton),
                         action: {
                             showAlert = false
                         }
                     ),
                     secondaryButton: .default(
-                        Text("添加"),
+                        Text(Constants.Add.Alert.secondaryButton),
                         action: {
                             showAlert = false
                             addTorrentLinkFormModel.urls = copyUrl
@@ -164,7 +173,7 @@ struct AddTorrentView: View {
     var body: some View {
         AddTorrentLinkView(defaultSavePath: defaultSavePath)
         .listStyle(PlainListStyle())
-        .navigationBarTitle(Text("下载"), displayMode: .inline)
+        .navigationBarTitle(Text(Constants.Add.NavBar.title), displayMode: .inline)
     }
 }
 

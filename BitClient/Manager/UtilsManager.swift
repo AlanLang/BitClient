@@ -31,28 +31,28 @@ class UtilsManager {
             let reduceTime : TimeInterval = currentTime - timeStamp
             //时间差小于60秒
             if reduceTime < 60 {
-                return "刚刚"
+                return Constants.Utils.just
             }
             //时间差大于一分钟小于60分钟内
             let mins = Int(reduceTime / 60)
             if mins < 60 {
-                return "\(mins)分钟前"
+                return "\(mins) \(Constants.Utils.minutesAgo)"
             }
             //时间差大于一小时小于24小时内
             let hours = Int(reduceTime / 3600)
             if hours < 24 {
-                return "\(hours)小时前"
+                return "\(hours) \(Constants.Utils.hoursAgo)"
             }
             //时间差大于一天小于30天内
             let days = Int(reduceTime / 3600 / 24)
             if days < 30 {
-                return "\(days)天前"
+                return "\(days) \(Constants.Utils.daysAgo)"
             }
             //不满足以上条件直接返回日期
             let date = NSDate(timeIntervalSince1970: timeStamp)
             let dfmatter = DateFormatter()
             //yyyy-MM-dd HH:mm:ss
-            dfmatter.dateFormat="yy年MM月dd日"
+        dfmatter.dateFormat=Constants.Utils.formatter
             return dfmatter.string(from: date as Date)
         }
 
