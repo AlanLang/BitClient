@@ -29,7 +29,7 @@ struct HomeView: View {
                                 deleteConfirmationShown = true
                                 selectedKey = key
                             } label: {
-                                Label("删除", systemImage: "trash")
+                                Label("", systemImage: "trash")
                             }
                             .tint(.red)
                             Button {
@@ -39,7 +39,7 @@ struct HomeView: View {
                                     bitService.resume(id: key)
                                 }
                             } label: {
-                                Label("Favorite", systemImage: torrent.state != "pausedUP" ? "pause" : "play.fill")
+                                Label("", systemImage: torrent.state != "pausedUP" ? "pause" : "play.fill")
                             }
                             .tint(.yellow)
                     }
