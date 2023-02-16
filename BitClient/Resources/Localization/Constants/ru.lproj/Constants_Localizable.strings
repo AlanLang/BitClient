@@ -61,6 +61,7 @@
 "Add.rootFolder" = "Корневая директория";
 "Add.sequentialDownload" = "Порядок загрузки";
 "Add.skipChecking" = "Не проверять";
+"Add.selectCategory" = "Выберите категорию";
 
 "Add.Warnings.emptyMessage" = "Адрес загрузки не может быть пустым";
 "Add.Warnings.emptyTitle" = "Магнитная загрузка";

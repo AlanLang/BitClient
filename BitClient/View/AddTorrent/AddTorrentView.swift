@@ -44,6 +44,7 @@ struct AddTorrentLinkView: View {
     @State var openFile = false
     
     @State private var downloadType: DownloadType = .url
+    @State private var selectedCategory = ""
     
     
     init(defaultSavePath: String) {
@@ -83,6 +84,15 @@ struct AddTorrentLinkView: View {
                 Toggle(Constants.Add.rootFolder, isOn: $addTorrentLinkFormModel.root_folder)
                 Toggle(Constants.Add.sequentialDownload, isOn: $addTorrentLinkFormModel.sequentialDownload)
                 Toggle(Constants.Add.skipChecking, isOn: $addTorrentLinkFormModel.skip_checking)
+                Picker(Constants.Add.selectCategory, selection: $selectedCategory) {
+                    ForEach(addTorrentLinkFormModel.categories, id: \.self) {
+                        Text($0)
+                    }
+                }
+                .pickerStyle(.menu)
+                .onChange(of: selectedCategory) { newValue in
+                    addTorrentLinkFormModel.category = newValue
+                }
             }
         }
         .fileImporter(isPresented: $openFile, allowedContentTypes: [UTType(filenameExtension: "torrent")!]) { res in
