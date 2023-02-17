@@ -60,7 +60,8 @@
 "Add.pauseAfterAdding" = "Pause after adding";
 "Add.rootFolder" = "Root folder";
 "Add.sequentialDownload" = "Sequential download";
-"Add.skipChecking" = "Skip checkng";
+"Add.skipChecking" = "Skip checking";
+"Add.selectCategory" = "Select a category";
 
 "Add.Warnings.emptyMessage" = "The download address cannot be empty";
 "Add.Warnings.emptyTitle" = "Magnetic download";

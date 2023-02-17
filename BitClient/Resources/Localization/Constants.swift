@@ -79,6 +79,7 @@ struct Constants {
         static let rootFolder = "Add.rootFolder".localized(moduleName: constants)
         static let sequentialDownload = "Add.sequentialDownload".localized(moduleName: constants)
         static let skipChecking = "Add.skipChecking".localized(moduleName: constants)
+        static let selectCategory = "Add.selectCategory".localized(moduleName: constants)
         
         struct Warnings {
             static let emptyMessage = "Add.Warnings.emptyMessage".localized(moduleName: constants)

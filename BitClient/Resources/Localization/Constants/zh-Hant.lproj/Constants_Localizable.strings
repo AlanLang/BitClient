@@ -64,6 +64,7 @@
 "Add.rootFolder" = "保留顶层文件";
 "Add.sequentialDownload" = "按顺序下载";
 "Add.skipChecking" = "跳过哈希值";
+"Add.selectCategory" = "选择类别";
 
 "Add.Warnings.emptyMessage" = "下载地址不能为空";
 "Add.Warnings.emptyTitle" = "磁力下载";

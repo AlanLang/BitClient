@@ -18,6 +18,7 @@ class AddTorrentLinkFormModel: ObservableObject {
     // 重命名
     @Published var rename: String
     @Published var category: String?
+    @Published private(set) var categories: [String]
     // 添加后暂停
     @Published var paused: Bool
     // 保留顶层文件
@@ -31,6 +32,15 @@ class AddTorrentLinkFormModel: ObservableObject {
     // 先下载首位文件块
     @Published var firstLastPiecePrio: Bool
     
+    var asDictionary : [String:Any] {
+        let mirror = Mirror(reflecting: self)
+        let dict = Dictionary(uniqueKeysWithValues: mirror.children.lazy.map({ (label:String?, value:Any) -> (String, Any)? in
+            guard let label = label else { return nil }
+            return (label, value)
+        }).compactMap { $0 })
+        return dict
+    }
+    
     init(savepath: String) {
         self.urls = ""
         self.sequentialDownload = false
@@ -39,39 +49,32 @@ class AddTorrentLinkFormModel: ObservableObject {
         self.cookie = ""
         self.rename = ""
         self.category = nil
+        self.categories = []
         self.paused = false
         self.root_folder = true
         self.dlLimit = ""
         self.upLimit = ""
         self.skip_checking = false
         self.firstLastPiecePrio = false
-        NetworkAPi.preferences() { result in
-            switch result {
-                case let .success(data):
-                    self.savepath = data.savePath
-                case let .failure(error):
-                    Message.error(message: error.localizedDescription)
-            }
-                
-        }
+        self.getInitialData()
     }
     
     func download(completion: @escaping (Bool) -> Void){
         NetworkAPi.download(model: self) {result in
             switch result {
-                case let .success(data):
+            case let .success(data):
                 switch data {
-                    case "Ok.":
-                        Message.success(message: "添加成功", title: "磁力下载")
-                        completion(true)
-                    default:
-                        Message.success(message: data, title: "磁力下载")
-                        completion(false)
-                    }
-                case let .failure(error):
-                    Message.error(message: error.localizedDescription)
-                print(error.localizedDescription)
+                case "Ok.":
+                    Message.success(message: "添加成功", title: "磁力下载")
+                    completion(true)
+                default:
+                    Message.success(message: data, title: "磁力下载")
                     completion(false)
+                }
+            case let .failure(error):
+                Message.error(message: error.localizedDescription)
+                print(error.localizedDescription)
+                completion(false)
             }
         }
     }
@@ -79,28 +82,40 @@ class AddTorrentLinkFormModel: ObservableObject {
     func downloadFile(fileUrl: URL,fileName: String, completion: @escaping (Bool) -> Void) {
         NetworkAPi.downloadFile(fileUrl: fileUrl, fileName: fileName, model: self) {result in
             switch result {
-                case let .success(data):
+            case let .success(data):
                 switch data {
-                    case "Ok.":
-                        Message.success(message: "添加成功", title: "磁力下载")
-                        completion(true)
-                    default:
-                        Message.error(message: data, title: "磁力下载")
-                        completion(false)
-                    }
-                case let .failure(error):
-                    Message.error(message: error.localizedDescription)
+                case "Ok.":
+                    Message.success(message: "添加成功", title: "磁力下载")
+                    completion(true)
+                default:
+                    Message.error(message: data, title: "磁力下载")
                     completion(false)
+                }
+            case let .failure(error):
+                Message.error(message: error.localizedDescription)
+                completion(false)
             }
         }
     }
     
-    var asDictionary : [String:Any] {
-        let mirror = Mirror(reflecting: self)
-        let dict = Dictionary(uniqueKeysWithValues: mirror.children.lazy.map({ (label:String?, value:Any) -> (String, Any)? in
-          guard let label = label else { return nil }
-          return (label, value)
-        }).compactMap { $0 })
-        return dict
-      }
+    private func getInitialData() {
+        NetworkAPi.preferences() { result in
+            switch result {
+            case let .success(data):
+                self.savepath = data.savePath
+            case let .failure(error):
+                Message.error(message: error.localizedDescription)
+            }
+            
+        }
+        NetworkAPi.categories() { result in
+            switch result {
+            case let .success(data):
+                self.categories = Array(data.keys)
+            case let .failure(error):
+                Message.error(message: error.localizedDescription)
+            }
+            
+        }
+    }
 }

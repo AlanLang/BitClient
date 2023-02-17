@@ -25,8 +25,11 @@ struct Maindata: Codable {
 }
 
 // MARK: - Categories
-struct Categories: Codable {
+struct Category: Codable {
+    let savePath, name: String
 }
+
+typealias Categories = [String: Category]
 
 // MARK: - ServerState
 struct ServerState: Codable {

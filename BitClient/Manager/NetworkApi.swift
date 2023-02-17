@@ -54,6 +54,18 @@ class NetworkAPi {
             
         }
     }
+    // 获取偏好设置
+    static func categories(completion: @escaping (Result<Categories, Error>) -> Void){
+        NetworkManager.shared.requestGet(path: self.basicUrl + "/api/v2/torrents/categories?kvs01ybv", parameters: nil){result in
+            switch result {
+            case let .success(data):
+                let result:Result<Categories, Error> = self.parseData(data)
+                completion(result)
+            case let .failure(error): completion(.failure(error))
+            }
+            
+        }
+    }
     // 添加下载
     static func download(model: AddTorrentLinkFormModel, completion: @escaping (Result<String, Error>) -> Void){
         let parameters: [String: Any] = [
@@ -63,7 +75,8 @@ class NetworkAPi {
             "root_folder": String(model.root_folder),
             "sequentialDownload": String(model.sequentialDownload),
             "skip_checking": String(model.skip_checking),
-            "rename": model.rename
+            "rename": model.rename,
+            "category": model.category ?? ""
         ]
         
         NetworkManager.shared.requestPost(path: self.basicUrl + "/api/v2/torrents/add", parameters: parameters) { result in
@@ -89,7 +102,8 @@ class NetworkAPi {
             "root_folder": String(model.root_folder),
             "sequentialDownload": String(model.sequentialDownload),
             "skip_checking": String(model.skip_checking),
-            "rename": model.rename
+            "rename": model.rename,
+            "category": model.category ?? ""
         ]
         
         NetworkManager.shared.sendFile(path: self.basicUrl + "/api/v2/torrents/add", fileURL: fileUrl, fileName: fileName, parameters: parameters) {result in
