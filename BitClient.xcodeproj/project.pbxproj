@@ -61,6 +61,7 @@
 		E7A10E202738D0F6000C89D8 /* ListEmptyTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEmptyTipView.swift; sourceTree = "<group>"; };
 		E7A34E322733BADC005F94E2 /* Maindata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maindata.swift; sourceTree = "<group>"; };
 		E7A34E362733C5E1005F94E2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E7B36CE12A5A6A5C002A882B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Constants_Localizable.strings"; sourceTree = "<group>"; };
 		E7BC55DE273266CD00AA2694 /* BitClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7BC55E1273266CD00AA2694 /* BitClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitClientApp.swift; sourceTree = "<group>"; };
 		E7BC55E5273266CE00AA2694 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -304,13 +305,14 @@
 			};
 			buildConfigurationList = E7BC55D9273266CD00AA2694 /* Build configuration list for PBXProject "BitClient" */;
 			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = en;
+			developmentRegion = "zh-Hans";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 				ru,
 				"zh-Hant",
+				"zh-Hans",
 			);
 			mainGroup = E7BC55D5273266CD00AA2694;
 			packageReferences = (
@@ -384,6 +386,7 @@
 				D27AE99129996E7500AE86AA /* en */,
 				D27AE99329996E7700AE86AA /* ru */,
 				D27AE99429996E9800AE86AA /* zh-Hant */,
+				E7B36CE12A5A6A5C002A882B /* zh-Hans */,
 			);
 			name = Constants_Localizable.strings;
 			sourceTree = "<group>";
@@ -516,7 +519,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"BitClient/Preview Content\"";
-				DEVELOPMENT_TEAM = 4VDCLK4MC2;
+				DEVELOPMENT_TEAM = UWL9677DYU;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BitClient/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -541,7 +544,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"BitClient/Preview Content\"";
-				DEVELOPMENT_TEAM = 4VDCLK4MC2;
+				DEVELOPMENT_TEAM = UWL9677DYU;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BitClient/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;

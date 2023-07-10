@@ -13,6 +13,6 @@
 
 ## 功能截图
 
-<img src="https://dada-image-bed.oss-cn-shenzhen.aliyuncs.com/BitClientScreen.png" width="800"></img>
+<img src="https://vip2.loli.io/2023/04/25/xXiWGHOnkDCtYBS.jpg" width="800"></img>
 ## 应用程序图标
 © 2021 [alanlang](https://github.com/AlanLang)  All rights reserved.
