@@ -8,7 +8,6 @@
 import SwiftUI
 import LoadingButton
 
-let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0);
 
 struct LoginView: View {
     @EnvironmentObject var state: AppState
@@ -20,17 +19,17 @@ struct LoginView: View {
             AppText()
             TextField(Constants.LoginPage.serverAddress, text: $state.url)
                 .padding()
-                .background(lightGreyColor)
+                .background(Color("lightGreyColor"))
                 .cornerRadius(5.0)
                 .padding(.bottom, 20)
             TextField(Constants.LoginPage.login, text: $state.username)
                 .padding()
-                .background(lightGreyColor)
+                .background(Color("lightGreyColor"))
                 .cornerRadius(5.0)
                 .padding(.bottom, 20)
             SecureField(Constants.LoginPage.password, text: $state.password)
                 .padding()
-                .background(lightGreyColor)
+                .background(Color("lightGreyColor"))
                 .cornerRadius(5.0)
                 .padding(.bottom, 20)
             LoadingButton(action: {
