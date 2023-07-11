@@ -10,6 +10,7 @@
 		D27AE99029996E7500AE86AA /* Constants_Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D27AE99229996E7500AE86AA /* Constants_Localizable.strings */; };
 		D27AE99629996EF400AE86AA /* Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27AE99529996EF400AE86AA /* Localize.swift */; };
 		D27AE99829996F1900AE86AA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27AE99729996F1900AE86AA /* Constants.swift */; };
+		D29B131F2A5C7AB000A8CC2E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D29B131E2A5C7AB000A8CC2E /* Colors.xcassets */; };
 		E703D24B297A3C1F000A13C7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E703D24A297A3C1F000A13C7 /* LoginView.swift */; };
 		E703D24E297A42ED000A13C7 /* LoadingButton in Frameworks */ = {isa = PBXBuildFile; productRef = E703D24D297A42ED000A13C7 /* LoadingButton */; };
 		E732A35D2734C739008467FE /* AddTorrentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E732A35C2734C739008467FE /* AddTorrentView.swift */; };
@@ -48,6 +49,7 @@
 		D27AE99429996E9800AE86AA /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Constants_Localizable.strings"; sourceTree = "<group>"; };
 		D27AE99529996EF400AE86AA /* Localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localize.swift; sourceTree = "<group>"; };
 		D27AE99729996F1900AE86AA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D29B131E2A5C7AB000A8CC2E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		E703D24A297A3C1F000A13C7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E732A35C2734C739008467FE /* AddTorrentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTorrentView.swift; sourceTree = "<group>"; };
 		E732A36727350CD1008467FE /* ServiceNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceNavigationBar.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				E7BC55F1273266EB00AA2694 /* View */,
 				E7BC55E1273266CD00AA2694 /* BitClientApp.swift */,
 				E7BC55E5273266CE00AA2694 /* Assets.xcassets */,
+				D29B131E2A5C7AB000A8CC2E /* Colors.xcassets */,
 				E7BC55EA273266CE00AA2694 /* Info.plist */,
 				E7BC55E7273266CE00AA2694 /* Preview Content */,
 			);
@@ -335,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7BC55E9273266CE00AA2694 /* Preview Assets.xcassets in Resources */,
+				D29B131F2A5C7AB000A8CC2E /* Colors.xcassets in Resources */,
 				D27AE99029996E7500AE86AA /* Constants_Localizable.strings in Resources */,
 				E7BC55E6273266CE00AA2694 /* Assets.xcassets in Resources */,
 			);
