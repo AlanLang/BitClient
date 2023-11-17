@@ -1,6 +1,6 @@
 # BitClient
 <p align="center">
-<img src="https://dada-image-bed.oss-cn-shenzhen.aliyuncs.com/bit-client.png" width="200"></img>
+<img src="https://s2.loli.net/2023/11/17/JCSmIOyfDzG823e.png" width="200"></img>
 </p>
 <h4 align="center">一款用于 qBittorrent 的 ios 客户端</h4>
 
