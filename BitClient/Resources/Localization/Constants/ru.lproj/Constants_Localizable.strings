@@ -46,6 +46,7 @@
 // About
 "About.web" = "Сайт";
 "About.license" = "Лицензия";
+"About.settings" = "настройки";
 "About.changelog" = "Список изменений";
 
 // Add torrent

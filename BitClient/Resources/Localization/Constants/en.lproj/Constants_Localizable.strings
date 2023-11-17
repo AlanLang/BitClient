@@ -46,6 +46,7 @@
 // About
 "About.web" = "Web";
 "About.license" = "License";
+"About.settings" = "Settings";
 "About.changelog" = "Changelog";
 
 // Add torrent

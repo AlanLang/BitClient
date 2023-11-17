@@ -64,6 +64,7 @@ struct Constants {
         static let web = "About.web".localized(moduleName: constants)
         static let license = "About.license".localized(moduleName: constants)
         static let changelog = "About.changelog".localized(moduleName: constants)
+        static let settings = "About.settings".localized(moduleName: constants)
     }
     
     struct Add {

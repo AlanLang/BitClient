@@ -41,6 +41,14 @@ struct AboutView: View {
                 UrlLink(title: Constants.About.web, linkTitle: "BitClient", url: "https://github.com/AlanLang/BitClient")
                 UrlLink(title: Constants.About.license, linkTitle: "GPL v3.0", url: "https://github.com/AlanLang/BitClient/blob/main/LICENSE")
                 UrlLink(title: Constants.About.changelog, linkTitle: "", url: "https://github.com/AlanLang/BitClient/blob/main/CHANGELOG.md")
+                Button(action: {
+                    guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
+                        return
+                    }
+                    UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
+                }) {
+                    Text(Constants.About.settings)
+                }
             }
             Spacer()
         }

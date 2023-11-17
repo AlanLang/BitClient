@@ -49,6 +49,7 @@
 // About
 "About.web" = "网站";
 "About.license" = "开源协议";
+"About.settings" = "设置";
 "About.changelog" = "更新说明";
 
 // Add torrent
