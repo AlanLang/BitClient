@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Network
 class AppState: ObservableObject {
     @Published var url: String = ""
     @Published var username: String = ""
@@ -44,6 +45,22 @@ class AppState: ObservableObject {
                     Message.error(message: error.localizedDescription)
             }
         }
+    }
+    
+    func requestNetworkPermission(completion: @escaping (Bool) -> Void) {
+        let monitor = NWPathMonitor()
+        monitor.pathUpdateHandler = { path in
+            if path.status == .satisfied {
+                print("Network is available")
+                completion(true)
+            } else {
+                print("Network is not available")
+                completion(false)
+            }
+        }
+            
+        let queue = DispatchQueue(label: "NetworkMonitor")
+        monitor.start(queue: queue)
     }
     
     func save(){

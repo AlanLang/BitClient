@@ -12,6 +12,7 @@ import LoadingButton
 struct LoginView: View {
     @EnvironmentObject var state: AppState
     @State var isLoading: Bool = false
+    @State var hasNetworkPermission: Bool = true
     
     var body: some View {
         VStack {
@@ -71,8 +72,29 @@ struct LoginView: View {
                 Text(Constants.LoginPage.buttonTitle).foregroundColor(Color.white)
             }
 
+            if !hasNetworkPermission {
+                Text("去授权网络权限")
+                    .padding(.top, 50)
+                    .foregroundColor(.blue)
+                    .onTapGesture {
+                        guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
+                            return
+                        }
+                        UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
+                }
+            }
+
         }
         .padding()
+        .onAppear(){
+            state.requestNetworkPermission() { success in
+                if success {
+                    self.hasNetworkPermission = true
+                } else {
+                    self.hasNetworkPermission = false
+                }
+            }
+        }
     }
 }
 
