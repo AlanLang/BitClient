@@ -7,20 +7,14 @@ import Foundation
 
 // MARK: - Welcome
 struct Maindata: Codable {
-    let categories: Categories
-    let fullUpdate: Bool
     let rid: Int
     let serverState: ServerState
-    let tags: [String]
     let torrents: [String: Torrent]
-    let trackers: [String: [String]]?
 
     enum CodingKeys: String, CodingKey {
-        case categories
-        case fullUpdate = "full_update"
         case rid
         case serverState = "server_state"
-        case tags, torrents, trackers
+        case torrents
     }
 }
 

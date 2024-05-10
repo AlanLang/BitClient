@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -523,7 +523,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"BitClient/Preview Content\"";
-				DEVELOPMENT_TEAM = UWL9677DYU;
+				DEVELOPMENT_TEAM = RA66Z3Q63F;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BitClient/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -531,7 +531,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vtech.BitClient;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alanlang.BitClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -548,7 +548,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"BitClient/Preview Content\"";
-				DEVELOPMENT_TEAM = UWL9677DYU;
+				DEVELOPMENT_TEAM = RA66Z3Q63F;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BitClient/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -556,7 +556,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vtech.BitClient;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alanlang.BitClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
