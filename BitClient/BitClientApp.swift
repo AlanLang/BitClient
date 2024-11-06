@@ -49,6 +49,10 @@ struct ContentView: View {
     private let tabTitle = [Constants.TabBar.list, Constants.TabBar.server, Constants.TabBar.about]
     @ObservedObject private var bitClientAppViewModel  = BitClientAppViewModel();
     @Environment(\.scenePhase) var scenePhase
+
+    var torrents: [String: Torrent] {
+        return bitClientAppViewModel.mainData?.torrents ?? [:]
+    }
     
     @ViewBuilder
     var navigationBarLeadingItems: some View {
@@ -77,7 +81,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             TabView(selection: $selectedIndex) {
-                HomeView(torrents: bitClientAppViewModel.mainData?.torrents.filter { (item) -> Bool in
+                HomeView(torrents: torrents.filter { (item) -> Bool in
                     if(self.homeMenu == 0.5) {
                         return (item.value.state == "uploading" || item.value.state == "downloading")
                     }

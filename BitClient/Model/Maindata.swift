@@ -9,7 +9,7 @@ import Foundation
 struct Maindata: Codable {
     let rid: Int
     let serverState: ServerState
-    let torrents: [String: Torrent]
+    let torrents: [String: Torrent]?
 
     enum CodingKeys: String, CodingKey {
         case rid

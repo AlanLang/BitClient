@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,8 @@
 		E757B7A727326DB300A59E1C /* TorrentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E757B7A627326DB300A59E1C /* TorrentItem.swift */; };
 		E77493AA273A831B00EE6703 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77493A9273A831B00EE6703 /* AboutView.swift */; };
 		E77493AD273A925400EE6703 /* PreferenceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77493AC273A925400EE6703 /* PreferenceData.swift */; };
+		E780F2342CDB6A8E00EFD31B /* SVGKit in Frameworks */ = {isa = PBXBuildFile; productRef = E780F2332CDB6A8E00EFD31B /* SVGKit */; };
+		E780F2362CDB6A8E00EFD31B /* SVGKitSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E780F2352CDB6A8E00EFD31B /* SVGKitSwift */; };
 		E79B70E5297AB755001DB23D /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79B70E4297AB755001DB23D /* AppState.swift */; };
 		E7A10E1E2738D0BD000C89D8 /* ServiceOfflineTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A10E1D2738D0BD000C89D8 /* ServiceOfflineTipView.swift */; };
 		E7A10E212738D0F6000C89D8 /* ListEmptyTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A10E202738D0F6000C89D8 /* ListEmptyTipView.swift */; };
@@ -84,6 +86,10 @@
 		E7D8E4402737FC3E0077DD79 /* UtilsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		E780F2382CDB6B7700EFD31B /* Assets */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Assets; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		E7BC55DB273266CD00AA2694 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -91,6 +97,8 @@
 			files = (
 				E7D8E4262736BB1F0077DD79 /* Alamofire in Frameworks */,
 				E703D24E297A42ED000A13C7 /* LoadingButton in Frameworks */,
+				E780F2362CDB6A8E00EFD31B /* SVGKitSwift in Frameworks */,
+				E780F2342CDB6A8E00EFD31B /* SVGKit in Frameworks */,
 				E7D8E43B273777E60077DD79 /* SPIndicator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,6 +200,7 @@
 		E7BC55E0273266CD00AA2694 /* BitClient */ = {
 			isa = PBXGroup;
 			children = (
+				E780F2382CDB6B7700EFD31B /* Assets */,
 				D27AE98C29996E3500AE86AA /* Resources */,
 				E7D8E4272736BB480077DD79 /* Manager */,
 				E732A36B27351F5B008467FE /* ViewModel */,
@@ -282,11 +291,16 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				E780F2382CDB6B7700EFD31B /* Assets */,
+			);
 			name = BitClient;
 			packageProductDependencies = (
 				E7D8E4252736BB1F0077DD79 /* Alamofire */,
 				E7D8E43A273777E60077DD79 /* SPIndicator */,
 				E703D24D297A42ED000A13C7 /* LoadingButton */,
+				E780F2332CDB6A8E00EFD31B /* SVGKit */,
+				E780F2352CDB6A8E00EFD31B /* SVGKitSwift */,
 			);
 			productName = BitClient;
 			productReference = E7BC55DE273266CD00AA2694 /* BitClient.app */;
@@ -322,6 +336,7 @@
 				E7D8E4242736BB1F0077DD79 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				E7D8E439273777E60077DD79 /* XCRemoteSwiftPackageReference "SPIndicator" */,
 				E703D24C297A42ED000A13C7 /* XCRemoteSwiftPackageReference "LoadingButton" */,
+				E780F2322CDB6A8E00EFD31B /* XCRemoteSwiftPackageReference "SVGKit" */,
 			);
 			productRefGroup = E7BC55DF273266CD00AA2694 /* Products */;
 			projectDirPath = "";
@@ -596,6 +611,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		E780F2322CDB6A8E00EFD31B /* XCRemoteSwiftPackageReference "SVGKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SVGKit/SVGKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		E7D8E4242736BB1F0077DD79 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -619,6 +642,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E703D24C297A42ED000A13C7 /* XCRemoteSwiftPackageReference "LoadingButton" */;
 			productName = LoadingButton;
+		};
+		E780F2332CDB6A8E00EFD31B /* SVGKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E780F2322CDB6A8E00EFD31B /* XCRemoteSwiftPackageReference "SVGKit" */;
+			productName = SVGKit;
+		};
+		E780F2352CDB6A8E00EFD31B /* SVGKitSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E780F2322CDB6A8E00EFD31B /* XCRemoteSwiftPackageReference "SVGKit" */;
+			productName = SVGKitSwift;
 		};
 		E7D8E4252736BB1F0077DD79 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
