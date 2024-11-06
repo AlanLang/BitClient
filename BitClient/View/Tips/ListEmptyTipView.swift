@@ -6,12 +6,23 @@
 //
 
 import SwiftUI
+import SVGKit
 
 struct ListEmptyTipView: View {
     var body: some View {
         VStack {
-            Text(Constants.Tips.noContent).foregroundColor(.gray)
-        }.frame(height: UIScreen.main.bounds.height)
+            if let svgImage = SVGKImage(named: "empty") {
+                Image(uiImage: svgImage.uiImage)
+                    .resizable()
+                    .scaledToFit()
+                    .padding(.horizontal, 24
+                    )
+                    .frame(maxWidth: .infinity)
+            }
+            Text(Constants.Tips.noContent)
+                .foregroundColor(.gray)
+        }
+        .frame(height: UIScreen.main.bounds.height)
     }
 }
 
