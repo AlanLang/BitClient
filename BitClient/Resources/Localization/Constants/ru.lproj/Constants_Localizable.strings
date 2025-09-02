@@ -41,6 +41,7 @@
 "Server.totalDownloads" = "всего загрузок";
 "Server.totalUploads" = "всего отдач";
 "Server.numberOfNodes" = "количество узлов";
+"Server.openInBrowser" = "Открыть в браузере";
 "Server.signOut" = "Выйти";
 
 // About

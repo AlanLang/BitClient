@@ -44,6 +44,7 @@
 "Server.totalDownloads" = "下载总量";
 "Server.totalUploads" = "上传总量";
 "Server.numberOfNodes" = "节点数";
+"Server.openInBrowser" = "在瀏覽器中開啟";
 "Server.signOut" = "退出登录";
 
 // About

@@ -84,6 +84,9 @@ struct ServiceView: View {
                 }
                 
                 Section {
+                    if let url = URL(string: bitService.url) {
+                        Link(Constants.Server.openInBrowser, destination: url)
+                    }
                     Button(Constants.Server.signOut, action: {
                         state.logOut()
                     })

@@ -41,6 +41,7 @@
 "Server.totalDownloads" = "total downloads";
 "Server.totalUploads" = "Total uploads";
 "Server.numberOfNodes" = "Number of nodes";
+"Server.openInBrowser" = "Open in Browser";
 "Server.signOut" = "sign out";
 
 // About
