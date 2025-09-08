@@ -50,8 +50,8 @@ struct ContentView: View {
     @ObservedObject private var bitClientAppViewModel  = BitClientAppViewModel();
     @Environment(\.scenePhase) var scenePhase
 
-    var torrents: [String: Torrent] {
-        return bitClientAppViewModel.mainData?.torrents ?? [:]
+    var torrents: [String: Torrent]? {
+        return bitClientAppViewModel.mainData?.torrents
     }
     
     @ViewBuilder
@@ -81,7 +81,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             TabView(selection: $selectedIndex) {
-                HomeView(torrents: torrents.filter { (item) -> Bool in
+                HomeView(torrents: torrents?.filter { (item) -> Bool in
                     if(self.homeMenu == 0.5) {
                         return (item.value.state == "uploading" || item.value.state == "downloading")
                     }

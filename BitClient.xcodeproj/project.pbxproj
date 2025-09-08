@@ -24,6 +24,7 @@
 		E79B70E5297AB755001DB23D /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79B70E4297AB755001DB23D /* AppState.swift */; };
 		E7A10E1E2738D0BD000C89D8 /* ServiceOfflineTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A10E1D2738D0BD000C89D8 /* ServiceOfflineTipView.swift */; };
 		E7A10E212738D0F6000C89D8 /* ListEmptyTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A10E202738D0F6000C89D8 /* ListEmptyTipView.swift */; };
+		307D4FDD440146FAAA6FD32E /* LoadingSkeletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171A953651FB474786D7B441 /* LoadingSkeletonView.swift */; };
 		E7A34E332733BADC005F94E2 /* Maindata.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A34E322733BADC005F94E2 /* Maindata.swift */; };
 		E7BC55E2273266CD00AA2694 /* BitClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC55E1273266CD00AA2694 /* BitClientApp.swift */; };
 		E7BC55E6273266CE00AA2694 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7BC55E5273266CE00AA2694 /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		E79B70E4297AB755001DB23D /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		E7A10E1D2738D0BD000C89D8 /* ServiceOfflineTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceOfflineTipView.swift; sourceTree = "<group>"; };
 		E7A10E202738D0F6000C89D8 /* ListEmptyTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEmptyTipView.swift; sourceTree = "<group>"; };
+		171A953651FB474786D7B441 /* LoadingSkeletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingSkeletonView.swift; sourceTree = "<group>"; };
 		E7A34E322733BADC005F94E2 /* Maindata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maindata.swift; sourceTree = "<group>"; };
 		E7A34E362733C5E1005F94E2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E7B36CE12A5A6A5C002A882B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Constants_Localizable.strings"; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 				E7D8E422273605E10077DD79 /* NoServiceTipView.swift */,
 				E7A10E1D2738D0BD000C89D8 /* ServiceOfflineTipView.swift */,
 				E7A10E202738D0F6000C89D8 /* ListEmptyTipView.swift */,
+				171A953651FB474786D7B441 /* LoadingSkeletonView.swift */,
 			);
 			path = Tips;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				E7D8E41E273603600077DD79 /* ServiceEditView.swift in Sources */,
 				E7D8E41127353F1B0077DD79 /* AboutNavigationBar.swift in Sources */,
 				E7A10E212738D0F6000C89D8 /* ListEmptyTipView.swift in Sources */,
+				307D4FDD440146FAAA6FD32E /* LoadingSkeletonView.swift in Sources */,
 				E77493AA273A831B00EE6703 /* AboutView.swift in Sources */,
 				E7A34E332733BADC005F94E2 /* Maindata.swift in Sources */,
 				E79B70E5297AB755001DB23D /* AppState.swift in Sources */,

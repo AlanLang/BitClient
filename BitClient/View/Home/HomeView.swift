@@ -17,7 +17,7 @@ struct HomeView: View {
         if (bitService.url == "") {
             NoServiceTipView()
         } else if(torrents == nil) {
-            ServiceOfflineTipView()
+            LoadingSkeletonView()
         } else if(torrents!.count == 0) {
             ListEmptyTipView()
         } else {

@@ -34,12 +34,14 @@ class BitClientAppViewModel: ObservableObject {
     func loadMainData(){
         if(BitService().url != "") {
             NetworkAPi.getMainData() {result in
-                switch result {
-                case let .success(data):
-                    self.mainData = data;
-                case let .failure(error):
-                    self.error = "\(error)"
-                    print(error)
+                DispatchQueue.main.async {
+                    switch result {
+                    case let .success(data):
+                        self.mainData = data;
+                    case let .failure(error):
+                        self.error = "\(error)"
+                        print(error)
+                    }
                 }
             }
         }
